@@ -1,26 +1,55 @@
 .Header {
     z-index: 99;
-    min-height: 120px;
+    min-height: 90px;
+    color: #222222;
+    display: flex;
+    padding-top: 30px;
     &Brand {
         font-size: 28px;
         font-weight: 800;
         padding-left: 78px;
         display: flex;
-        position: relative;
-        align-items: center;
-        margin-top: 30px;
         &::before {
             width: 45px;
             height: 45px;
             content: "";
-            background-image: url("../../logo.png");
+            background-image: url("/logo.png");
             background-size: cover;
             background-repeat: no-repeat;
-
             left: 20px;
-            display: flex;
             position: absolute;
-            align-items: center;
+            margin-top: -5px;
+        }
+    }
+    &Left {
+        margin-left: auto;
+        justify-content: flex-end;
+        float: right;
+        margin-right: 48px;
+        &Link {
+            font-size: 14px;
+            margin: 0 10px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        &language {
+            font-size: 13px;
+            font-weight: 700;
+            border-color: transparent;
+            background-color: #f6f6f6;
+            padding: 5px 8px;
+            padding-left: 28px;
+            border-radius: 10px;
+            //align-items: center;
+            //justify-items: center;
+            &:hover {
+                cursor: pointer;
+            }
+            & img{
+                position: absolute;
+                margin-left: -25px;
+                margin-top: -5px;
+            }
         }
     }
 }
