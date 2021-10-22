@@ -1,16 +1,10 @@
-import FooterCertification from './components/footers/footerCertification';
-import HeaderBrand from './components/headers/headerBrand';
 import { BrowserRouter as Router } from "react-router-dom";
-import BannerSignUp from './components/banner/bannerSignUp';
+import Login from './pages/login';
 
 function App() {
   return (
     <Router>
-
-        <HeaderBrand/>
-        <BannerSignUp/>
-        <FooterCertification/>
-
+      <Login />
     </Router>
   );
 }

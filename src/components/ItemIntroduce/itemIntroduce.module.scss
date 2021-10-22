@@ -1,0 +1,20 @@
+.Item{
+    color: rgba(34, 34, 34, 1);
+    width: 315px;
+    display: inline-block;
+
+    &Img{
+        height: 60px;
+        width: 54px;
+    }
+    &Title{
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 22px;
+        margin: 14px 0 9px 0;
+    }
+    & span{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
