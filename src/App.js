@@ -1,12 +1,16 @@
-import HeaderBrand from './components/headers/headerBrand'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import FooterCertification from './components/footers/footerCertification';
+import HeaderBrand from './components/headers/headerBrand';
+import { BrowserRouter as Router } from "react-router-dom";
+import BannerSignUp from './components/banner/bannerSignUp';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={HeaderBrand} />
-      </Switch>
+
+        <HeaderBrand/>
+        <BannerSignUp/>
+        <FooterCertification/>
+
     </Router>
   );
 }
