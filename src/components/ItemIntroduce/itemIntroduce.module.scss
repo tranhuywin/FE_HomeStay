@@ -1,20 +1,20 @@
 .Item{
     color: rgba(34, 34, 34, 1);
-    width: 315px;
+    width: 31.5rem;
     display: inline-block;
 
     &Img{
-        height: 60px;
-        width: 54px;
+        height: 6rem;
+        width: 5.4rem;
     }
     &Title{
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 800;
         line-height: 22px;
-        margin: 14px 0 9px 0;
+        margin: 1.4rem 0 0.9rem 0;
     }
     & span{
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 600;
     }
 }
