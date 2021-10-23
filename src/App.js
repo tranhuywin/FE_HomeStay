@@ -1,12 +1,25 @@
-import HeaderBrand from './components/headers/headerBrand'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { LoginRoute } from './routers';
+import HeaderBrand from './components/headers/headerBrand';
+import FooterCertification from './components/footers/footerCertification';
 
+import './app.scss'
 function App() {
   return (
     <Router>
+      <header>
+        <HeaderBrand />
+      </header>
+      
       <Switch>
-        <Route exact path="/" component={HeaderBrand} />
+        <Route path="/login">
+          <LoginRoute />
+        </Route>
       </Switch>
+
+      <footer>
+        <FooterCertification />
+      </footer>
     </Router>
   );
 }
