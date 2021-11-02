@@ -1,0 +1,25 @@
+.Card{
+    width: 26.3rem;
+    height: 26.3rem;
+    border-radius: 0.4rem;
+    margin-top: 5rem;
+    display: inline-block;
+    position: relative;
+    &Image{
+        width: 100%;
+    }
+    &TypeRoom{
+        color:#22222280;
+        font-size: 1.4rem;
+    }
+    &NameRoom{
+        color: #222222CC;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    &PricedRoom{
+        color: #222222;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
