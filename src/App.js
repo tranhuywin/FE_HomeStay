@@ -1,4 +1,4 @@
-import HeaderBrand from './components/apartmentCart/card'
+import HeaderBrand from './containers/apartmentCart'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
