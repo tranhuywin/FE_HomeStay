@@ -1,26 +1,55 @@
 .Header {
     z-index: 99;
-    min-height: 120px;
+    min-height: 9rem;
+    color: #222222;
+    display: flex;
+    padding-top: 3rem;
     &Brand {
-        font-size: 28px;
+        font-size: 2.8rem;
         font-weight: 800;
-        padding-left: 78px;
+        padding-left: 7.8rem;
         display: flex;
-        position: relative;
-        align-items: center;
-        margin-top: 30px;
         &::before {
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
             content: "";
-            background-image: url("../../logo.png");
+            background-image: url("/logo.png");
             background-size: cover;
             background-repeat: no-repeat;
-
-            left: 20px;
-            display: flex;
+            left: 2rem;
             position: absolute;
-            align-items: center;
+            margin-top: -0.5rem;
+        }
+    }
+    &Left {
+        margin-left: auto;
+        justify-content: flex-end;
+        float: right;
+        margin-right: 4.8rem;
+        &Link {
+            font-size: 1.4rem;
+            margin: 0 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        &language {
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-color: transparent;
+            background-color: #f6f6f6;
+            padding: 0.5rem 0.8rem;
+            padding-left: 2.8rem;
+            border-radius: 10px;
+            //align-items: center;
+            //justify-items: center;
+            &:hover {
+                cursor: pointer;
+            }
+            & img{
+                position: absolute;
+                margin-left: -2.5rem;
+                margin-top: -0.5rem;
+            }
         }
     }
 }
