@@ -1,0 +1,25 @@
+.Wrapper {
+    display: flex;
+    font-size: 1.6rem;
+    color: #222222cc;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60rem;
+    &NumbericUpDowm {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #222222;
+        display: flex;
+        align-items: center;
+        button {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0 1.5rem;
+            cursor: pointer;
+            font-size: 2rem;
+            color: #ffffff;
+            background-color: #3a3a3a;
+            border: none;
+        }
+    }
+}

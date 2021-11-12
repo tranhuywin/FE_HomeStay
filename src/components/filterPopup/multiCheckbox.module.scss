@@ -1,0 +1,61 @@
+.Wrapper{
+    border-bottom: 1px solid #00000099;
+    padding: 3.6rem 0 3.1rem 0;
+    max-width: 60rem;
+    &Title{
+        font-size:2rem;
+        font-weight: 700;
+        color: #222222;
+        margin-bottom: 1rem;
+    }
+}
+.Content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1.4rem;
+    div{
+        flex-basis: 50%;
+        display: flex;
+        label{
+            color: #222222CC;
+            font-size:1.6rem;
+            position:relative;
+            margin-left: 3rem;
+            margin-top: 2.4rem;
+            cursor: pointer;
+            &::before{
+                content: "";
+                background-image: url("/logo.png");
+                background-position: center;
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                left: -2.5rem;
+                transform: scale(0);
+                transition: all 0.3s ease-in-out;
+            }
+            &::after{
+                content: "";
+                border: 1px solid #00000099;
+                width: 2.1rem; 
+                height: 2.1rem;
+                position: absolute;
+                left: -2.6rem;
+                top: -0.18rem;
+                border-radius: 0.3rem;
+            }
+        }
+        input[type="checkbox"]{
+            width: 2rem;
+            height: 2rem;
+            border-radius:0.3rem;
+            display: none;
+            :checked + label::before{
+                transform: scale(1);
+            }
+        }
+        input[type="checkbox"]:checked + label::before{
+            transform: scale(1);
+        }
+    }
+}
