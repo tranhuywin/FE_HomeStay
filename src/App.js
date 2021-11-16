@@ -1,25 +1,15 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { LoginRoute } from './routers';
-import HeaderBrand from './components/headers/headerBrand';
-import FooterCertification from './components/footers/footerCertification';
+import { BrowserRouter as Router } from "react-router-dom";
+import Numericupdown from "./components/filterPopup/numericupdown";
+import MultiCheckbox from "./components/filterPopup/multiCheckbox";
 
 import './app.scss'
 function App() {
   return (
     <Router>
-      <header>
-        <HeaderBrand />
-      </header>
-      
-      <Switch>
-        <Route path="/login">
-          <LoginRoute />
-        </Route>
-      </Switch>
-
-      <footer>
-        <FooterCertification />
-      </footer>
+     <Numericupdown title="Giường"></Numericupdown>
+     <MultiCheckbox name = "tiện ích chung"
+     checkboxs ={['1', '2', '3', '4', '5', '6', '7']}
+     ></MultiCheckbox>
     </Router>
   );
 }
