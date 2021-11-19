@@ -1,8 +1,11 @@
+import Styles from './checkbox.module.scss'
 function CheckBox({label}){
+    const ramdom = Math.random().toString().replace(/0\./, '');
+
     return (                            
-        <div>
-            <input type="checkbox" name={name} id={"checkbox" + index}/>
-            <label for={"checkbox" + index}>{label}</label>
+        <div className={Styles.Wrapper}>
+            <input type="checkbox" id={ramdom}/>
+            <label  for={ramdom}>{label}</label>
         </div>
     )
 }

@@ -1,0 +1,34 @@
+.Wrapper{
+    max-width: 60rem;
+    &TitleNumberic{
+        color: #222222;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &Numberic{
+        margin-top: 2.5rem;
+    }
+    &FilterFooter{
+        display: flex;
+        justify-content: space-between;
+        margin: 4rem 0;
+        &Apply{
+            background-color: #F96B1C;
+            border-radius: 0.5rem;
+            font-size: 1.6rem;
+            color: #FFFFFF;
+            border: none;
+            width: 7.5rem;
+            height: 3rem;
+            cursor: pointer;
+        }
+        &Delete{
+            color: #222222;
+            font-size: 1.6rem;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    }
+}
