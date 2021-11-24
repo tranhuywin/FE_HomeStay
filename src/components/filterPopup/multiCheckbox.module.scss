@@ -1,0 +1,16 @@
+.Wrapper{
+    border-bottom: 1px solid #00000099;
+    padding: 3.6rem 0 3.1rem 0;
+    &Title{
+        font-size:2rem;
+        font-weight: 700;
+        color: #222222;
+        margin-bottom: 1rem;
+    }
+}
+.Content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1.4rem;
+    
+}
