@@ -18,9 +18,9 @@ function Login() {
       width: "750px",
     },
     modalEdit: {
-      left: "50%",
+      left: "70%",
       width: "40%",
-      top: "12%",
+      top: "20%",
     },
   };
   return (
