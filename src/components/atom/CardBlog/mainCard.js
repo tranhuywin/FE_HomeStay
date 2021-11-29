@@ -1,7 +1,7 @@
-import Styles from './CardBlog.module.scss';
+import Styles from './MainCardBlog.module.scss';
 import { Link } from 'react-router-dom';
 
-export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard}) {
+export default function MainCardBlog({title, srcImg, dateAgo, timeReading, styleCard}) {
     return (
         <div className={Styles.BlogWapper} style={styleCard}>
             <div className={Styles.BlogWapperImage}>
