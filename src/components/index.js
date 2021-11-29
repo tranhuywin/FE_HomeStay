@@ -11,6 +11,7 @@ export { default as Search } from "./SearchBar/Search";
 export { default as Header } from "./Header/Header";
 export { default as Footer } from "./Footer/Footer";
 export { default as PaginationBar } from "./Pagination/PaginationBar";
+export { default as CardBlog } from "./Atom/CardBlog";
 
 export { default as CheckBoxIcon } from "./Atom/SearchFilter/CheckBoxIcon";
 export { default as ListRoomPagination } from "./Room/Pagination/ListRoomPagination";

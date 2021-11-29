@@ -1,7 +1,7 @@
 import React from "react";
 import "./RoomItemH.scss";
 import TextIcon from "../TextIcon";
-import BigPrice from "../../Atom/TextBlock/BigPrice";
+import BigPrice from "../TextBlock/BigPrice";
 import {
   HomeIcon,
   RulerIcon,

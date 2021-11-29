@@ -1,7 +1,7 @@
 import React from "react";
 import "./RoomItemV.scss";
 
-import BigPrice from "../../Atom/TextBlock/BigPrice";
+import BigPrice from "../TextBlock/BigPrice";
 import { Link } from "react-router-dom";
 import { FormatMoneyByCateMotel } from "../../../helpers";
 

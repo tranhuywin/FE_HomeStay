@@ -9,11 +9,13 @@
         font-weight: 800;
         padding-left: 7.8rem;
         display: flex;
+        cursor: pointer;
+        color: #222222;
         &::before {
             width: 4.5rem;
             height: 4.5rem;
             content: "";
-            background-image: url("/logo.png");
+            background-image: url("../../assets/logo.png");
             background-size: cover;
             background-repeat: no-repeat;
             left: 2rem;
@@ -31,6 +33,7 @@
             margin: 0 1rem;
             font-weight: 700;
             cursor: pointer;
+            color: #000000;
         }
         &language {
             font-size: 1.3rem;

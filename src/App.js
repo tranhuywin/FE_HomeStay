@@ -1,7 +1,9 @@
 import "./app.scss";
 import { HomeRoute, RoomDetail, SearchResultRoute } from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Header, Footer } from "./components";
+//import { Header, Footer } from "./components";
+import HeaderBrand from './components/headers/headerBrand';
+import FooterCertification from './components/footers/footerCertification';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import FilterSlice from "./Redux/features/Filter/FilterSlice";
@@ -11,7 +13,7 @@ function App() {
   return (
     <Router>
       <header>
-        <Header />
+        <HeaderBrand />
       </header>
       <Switch>
         <Provider store={store}>
@@ -27,7 +29,7 @@ function App() {
         </Provider>
       </Switch>
       <footer>
-        <Footer />
+        <FooterCertification />
       </footer>
     </Router>
   );

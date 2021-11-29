@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.12.1"
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "node-sass": "^6.0.1"
   }
 }
