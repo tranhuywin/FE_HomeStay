@@ -1,0 +1,14 @@
+.Button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 5.6rem;
+    height: 5.6rem;
+    border: none;
+    box-shadow: rgba(0,0,0,0.8) 0 4px 10px;
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+        transform: scale3d(1.01, 1.01, 1);
+        cursor: pointer;
+    }
+}

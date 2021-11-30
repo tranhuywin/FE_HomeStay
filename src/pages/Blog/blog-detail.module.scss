@@ -1,0 +1,78 @@
+.Banner {
+    width: 100%;
+    height: 42.8rem;
+}
+.Container {
+    display: flex;
+}
+.Content {
+    color: #222222cc;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    width: 70%;
+    margin-top: 4rem;
+    margin-left: 10%;
+    &Title {
+        color: #222222;
+        font-weight: 700;
+        font-size: 3.8rem;
+        line-height: 6.76rem;
+        margin-left: auto;
+        margin-right: auto;
+        &Time {
+            margin-top: 2rem;
+            color: #222222cc;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.68rem;
+            text-align: center;
+            display: block;
+        }
+    }
+    &Body {
+        margin-top: 3.1rem;
+        p {
+            font-size: 1.6rem;
+            color: #222222cc;
+            margin-top: 3rem;
+        }
+        h3 {
+            margin-bottom: 3rem;
+            color: #222222;
+            font-size: 2.6rem;
+        }
+    }
+    &Actor {
+        margin-top: 3.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &Avatar {
+            width: 5.6rem;
+            height: 5.6rem;
+            border-radius: 50%;
+            background-color: #c4c4c4;
+        }
+        &Name{
+            margin-left: 3.3rem;
+        }
+    }
+}
+.Buttons {
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    right: 16rem;
+    top: 40%;
+    &Button{
+        margin: 1.4rem 0;
+    }
+}

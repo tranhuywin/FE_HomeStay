@@ -4,6 +4,12 @@
     display: block;
     cursor: pointer;
     position: relative;
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: scale3d(1.01, 1.01, 1);
+    }
     &Image {
         position: relative;
         img {
@@ -13,7 +19,6 @@
             background-repeat: no-repeat;
             object-fit: cover;
             border-radius: 0.4rem;
-
         }
         &User {
             position: absolute;

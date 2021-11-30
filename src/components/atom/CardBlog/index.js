@@ -1,19 +1,20 @@
 import Styles from './CardBlog.module.scss';
 import { Link } from 'react-router-dom';
+import userPNG from '../../../assets/images/icons/Person.png';
 
-export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard}) {
+export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard, to}) {
     return (
-        <div className={Styles.BlogWapper} style={styleCard}>
+        <Link className={Styles.BlogWapper} style={styleCard} to={to}>
             <div className={Styles.BlogWapperImage}>
                 <img src={srcImg} alt="" />
                 <div className={Styles.BlogWapperImageUser}>
-                    <img src='../../../assets/images/icons/Person.svg' alt="user"></img>
+                    <img src={userPNG} alt="user"></img>
                 </div>
             </div>
             <div className={Styles.BlogWapperContent}>
-                    <Link className={Styles.BlogWapperContentTitle} to='/'>
+                    <div className={Styles.BlogWapperContentTitle}>
                         {title}
-                    </Link>
+                    </div>
 
                 <div className={Styles.BlogWapperContentFooter}>
                     <div className={Styles.BlogWapperContentFooterDate}>
@@ -27,5 +28,5 @@ export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard
                     </div>
                 </div>
             </div>
-        </div>)
+        </Link>)
 }

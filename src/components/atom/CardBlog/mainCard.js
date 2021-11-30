@@ -1,5 +1,6 @@
 import Styles from './MainCardBlog.module.scss';
 import { Link } from 'react-router-dom';
+import userPNG from '../../../assets/images/icons/Person.svg';
 
 export default function MainCardBlog({title, srcImg, dateAgo, timeReading, styleCard}) {
     return (
@@ -7,7 +8,7 @@ export default function MainCardBlog({title, srcImg, dateAgo, timeReading, style
             <div className={Styles.BlogWapperImage}>
                 <img src={srcImg} alt="" />
                 <div className={Styles.BlogWapperImageUser}>
-                    <img src='../../../assets/images/icons/Person.svg' alt="user"></img>
+                    <img src={userPNG} alt="user"></img>
                 </div>
             </div>
             <div className={Styles.BlogWapperContent}>
