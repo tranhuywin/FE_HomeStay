@@ -4,7 +4,7 @@ export default function ButtonBlog({icon}){
     return(
         <>
         <button className={Styles.Button}>
-            {icon}
+            <img src={icon} alt='icon'></img>
         </button>
         </>
     )

@@ -1,6 +1,8 @@
 import Styles from './blog-detail.module.scss';
 import { ButtonBlog } from '../../components';
-
+import UpArrow from '../../assets/images/icons/Up Arrow.png';
+import Facebook from '../../assets/images/icons/Facebook.png';
+import Twitter from '../../assets/images/icons/Twitter.png';
 export default function BlogDetail() {
     return (
         <div>
@@ -46,15 +48,18 @@ export default function BlogDetail() {
                     </div>
                 </div>
                 <div className={Styles.Buttons}>
-                    <div className={Styles.ButtonsButton}>
-                        <ButtonBlog icon='up' />
+                    <div className={Styles.ButtonsSticky}>
+                        <div className={Styles.ButtonsButton}>
+                            <ButtonBlog icon={UpArrow} />
+                        </div>
+                        <div className={Styles.ButtonsButton}>
+                            <ButtonBlog icon={Facebook} />
+                        </div>
+                        <div className={Styles.ButtonsButton}>
+                            <ButtonBlog icon={Twitter} />
+                        </div>
                     </div>
-                    <div className={Styles.ButtonsButton}>
-                        <ButtonBlog icon='tw' />
-                    </div>
-                    <div className={Styles.ButtonsButton}>
-                        <ButtonBlog icon='fb' />
-                    </div>
+
                 </div>
             </div>
         </div>
