@@ -1,5 +1,5 @@
 import "./app.scss";
-import { HomeRoute, RoomDetail, SearchResultRoute } from "./routes/routes";
+import { HomeRoute, RoomDetail, SearchResultRoute, UserRoute } from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import { Header, Footer } from "./components";
 import HeaderBrand from './components/headers/headerBrand';
@@ -25,6 +25,9 @@ function App() {
           </Route>
           <Route path="/">
             <HomeRoute />
+          </Route>
+          <Route path="/me">
+            <UserRoute />
           </Route>
         </Provider>
       </Switch>

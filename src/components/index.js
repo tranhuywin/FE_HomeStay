@@ -14,6 +14,7 @@ export { default as PaginationBar } from "./Pagination/PaginationBar";
 export { default as CardBlog } from "./Atom/CardBlog";
 export { default as MainCardBlog } from "./Atom/CardBlog/mainCard";
 export { default as ButtonBlog} from "./Atom/CardBlog/button";
+export { default as PrimaryButton} from "./button/PrimaryButton";
 
 export { default as CheckBoxIcon } from "./Atom/SearchFilter/CheckBoxIcon";
 export { default as ListRoomPagination } from "./Room/Pagination/ListRoomPagination";

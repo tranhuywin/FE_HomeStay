@@ -7,3 +7,4 @@ export { default as Register } from "./SignUp/Register";
 export { default as CreateRoom } from "./RoomManagement/CreateRoom";
 export { default as Blog } from "./Blog";
 export { default as BlogDetail } from "./Blog/blog-detail";
+export { default as EditProfile } from "./User/EditProfile";

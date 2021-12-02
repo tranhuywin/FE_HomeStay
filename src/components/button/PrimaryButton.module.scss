@@ -1,0 +1,14 @@
+.PrimaryButton {
+    background: linear-gradient(
+        90deg,
+        #02aab0 0%,
+        rgba(0, 205, 172, 0.51) 100%
+    );
+    color: #ffffff;
+    box-shadow: 0px 0px 10px 0px #00000040;
+    border-radius: 10px;
+    border: none;
+    padding: 1.3rem 1.7rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
