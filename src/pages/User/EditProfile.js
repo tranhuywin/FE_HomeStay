@@ -1,23 +1,39 @@
-import { PrimaryButton } from '../../components';
+import { PrimaryButton, FranceInput, Vietnam, PhoneNumberInput } from '../../components';
 import Styles from './EditPRofile.module.scss';
 import Person from '../../assets/images/icons/PersonBlack.png';
-import Password from '../../assets/images/icons/Password.png';
-import Connect from '../../assets/images/icons/Connect.png';
 export default function EditProfile() {
     return (
-        <div className={Styles.Wrapper}>
-            <div className={Styles.UserNavigation}>
-                <ul>
-                    <li style={{ fontWeight: 700 }}><img src={Person} alt="logo"></img>Thông tin tài khoản</li>
-                    <li><img src={Password} alt="logo"></img>Thay đổi mật khẩu</li>
-                    <li><img src={Connect} alt="logo"></img>Liên kết tài khoản</li>
-                </ul>
-            </div>
-            <div className={Styles.UserInfo}>
-                <div className={Styles.UserInfo__Avatar}>
+        <div>
+                <div className={Styles.ProfileInfoAvatar}>
+                    <img src={Person} alt='avatar'></img>
+                    <PrimaryButton text="Đổi ảnh đại diện"></PrimaryButton>
                 </div>
-                <PrimaryButton text="Đổi ảnh đại diện"></PrimaryButton>
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="Pháp" titleInput="Tên"></FranceInput>
+                </div>
+
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="Nguyễn Văn" titleInput="Họ và tên đệm"></FranceInput>
+                </div>
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="nguyenvanphap@gmail.com" titleInput="Email" typeInput="email"></FranceInput>
+                </div>
+                <div className={Styles.ProfileInfoElement}>
+                    <PhoneNumberInput
+                        titleInput={"Số điện thoại"}
+                        textInput={"Mật khẩu"}
+                        iconComponent={<Vietnam />}
+                    />
+                </div>
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="24 đường số 11, Linh Trung, Thủ Đức, Hồ Chí Minh" titleInput="Địa chỉ"></FranceInput>
+                </div>
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="nguyenvanphap@gmail.com" titleInput="Ngày sinh" typeInput="date"></FranceInput>
+                </div>
+                <div className={Styles.ProfileInfoElement}>
+                    <FranceInput textInput="Nam" titleInput="Giới Tính"></FranceInput>
+                </div>
             </div>
-        </div>
     )
 }

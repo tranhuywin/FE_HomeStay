@@ -9,6 +9,7 @@ function FranceInput(props) {
     miniTitleInput,
     isInValid,
     errorText,
+    typeInput,
   } = props;
   return (
     <div className={Styles.FranceInputBlock}>
@@ -24,9 +25,9 @@ function FranceInput(props) {
         <div className={Styles.InputWrap}>
           <input
             className={Styles.Input}
-            type="text"
             autoComplete="off"
             placeholder={textInput}
+            type={typeInput ? typeInput : "text"}
           />
           {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}
           <div className={Styles.IconWrap}>

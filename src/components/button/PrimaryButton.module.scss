@@ -11,4 +11,7 @@
     padding: 1.3rem 1.7rem;
     font-size: 1.6rem;
     font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
 }
