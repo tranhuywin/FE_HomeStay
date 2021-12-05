@@ -1,9 +1,14 @@
 import "./app.scss";
-import { HomeRoute, RoomDetail, SearchResultRoute, UserRoute } from "./routes/routes";
+import {
+  HomeRoute,
+  RoomDetail,
+  SearchResultRoute,
+  UserRoute,
+} from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import { Header, Footer } from "./components";
-import HeaderBrand from './components/headers/headerBrand';
-import FooterCertification from './components/footers/footerCertification';
+import HeaderBrand from "./components/headers/headerBrand";
+import FooterCertification from "./components/footers/footerCertification";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import FilterSlice from "./Redux/features/Filter/FilterSlice";

@@ -1,38 +1,102 @@
+.DFlex {
+  display: flex;
+  align-items: center;
+}
+
+.TabHeader {
+  .TabHeaderWrap {
+    .TabHeaderContent {
+      //   border: 1px solid #000;
+      //   border-top: 0;
+      //   border-left: 0;
+      //   border-right: 0;
+      box-shadow: 0 4px 6px -6px #222;
+      padding: 0 2.5rem;
+      margin-right: 4.5rem;
+      .ProfileTab {
+      }
+      .BookingRoomTab {
+      }
+      .CommonTitle {
+        padding: 0 2.4rem;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+      .Title {
+        border-bottom: 4px solid #fff;
+        padding-bottom: 0.5rem;
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 17px;
+        transition: all 0.3s ease;
+        font-style: normal;
+        color: #000000b2;
+        cursor: pointer;
+        &:hover {
+          border-bottom: 4px solid #02aab0;
+        }
+      }
+    }
+  }
+}
+
 .Wrapper {
-    display: flex;
-    margin-top: 4.5rem;
+  display: flex;
+  margin-top: 4.5rem;
 }
 .UserNavigation {
-    font-size: 1.4rem;
-    color: #000000;
-    box-shadow: 0px 0px 10px 0px #00000040;
-    border-radius: 10px;
-    width: 30%;
-    margin: 0 2.5rem;
-    overflow: hidden;
-    height: 1%;
-    ul {
-        padding: 0.8rem 3.1rem 1.9rem 2.3rem;
-        li {
-            border-bottom: 0.5px solid #00000080;
-            padding: 1.6rem;
-            display: flex;
-            align-items: center;
-            img {
-                margin-right: 1rem;
-            }
-        }
-        li:hover {
-            cursor: pointer;
-        }
+  font-size: 1.4rem;
+  color: #000000;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  border-radius: 10px;
+  width: 30%;
+  margin: 0 2.5rem;
+  overflow: hidden;
+  height: 1%;
+  ul {
+    padding: 0.8rem 3.1rem 1.9rem 2.3rem;
+    li {
+      border-bottom: 0.5px solid #00000080;
+      padding: 1.6rem;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 1rem;
+      }
     }
+    .CommonLine {
+      border: 0;
+      padding: 1.6rem;
+      // padding-top: 0.8rem;
+      align-items: center;
+      display: block;
+      &:not(:first-child) {
+        padding-top: 0rem;
+        margin-top: -2.4rem;
+      }
+      &:last-child {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 1.2rem;
+      }
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
 }
 .Content {
-    font-size: 1.4rem;
-    color: #000000;
-    box-shadow: 0px 0px 10px 0px #00000040;
-    border-radius: 10px;
-    width: 70%;
-    padding: 1.7rem 2.1rem 5rem 2.1rem;
-    margin-right: 4rem;
+  font-size: 1.4rem;
+  color: #000000;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  border-radius: 10px;
+  width: 70%;
+  padding: 1.7rem 2.1rem 5rem 2.1rem;
+  margin-right: 4rem;
+}
+
+.ActiveTab {
+  border-bottom: 4px solid #02aab0 !important;
 }

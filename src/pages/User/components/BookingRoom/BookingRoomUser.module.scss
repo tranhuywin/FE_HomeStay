@@ -1,0 +1,58 @@
+.Wrapper {
+  display: flex;
+  margin-top: 4.5rem;
+}
+.UserNavigation {
+  font-size: 1.4rem;
+  color: #000000;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  border-radius: 10px;
+  width: 30%;
+  margin: 0 2.5rem;
+  ul {
+    padding: 0.8rem 3.1rem 1.9rem 2.3rem;
+    li {
+      border-bottom: 0.5px solid #00000080;
+      padding: 1.6rem;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 1rem;
+      }
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
+}
+.ProfileInfo {
+  font-size: 1.4rem;
+  color: #000000;
+  box-shadow: 0px 0px 10px 0px #00000040;
+  border-radius: 10px;
+  width: 70%;
+  padding: 1.7rem 2.1rem 5rem 2.1rem;
+  margin-right: 4rem;
+  &Avatar {
+    display: flex;
+    align-items: center;
+    img {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: #c4c4c4;
+      margin-right: 1.7rem;
+    }
+  }
+  &Element {
+    display: block;
+  }
+}
+
+.TitleResult {
+  color: #000000b2;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+}
