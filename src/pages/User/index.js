@@ -120,14 +120,14 @@ export default function User() {
           </div>
         )}
         <div className={Styles.Content}>
-          {/* {page === 0 ? (
+          {(!tabActive && page === 0) ? (
             <EditProfile />
-          ) : page === 1 ? (
+          ) : (!tabActive && page === 1) ? (
             <ChangePassword />
-          ) : page === 2 ? (
+          ) : (!tabActive && page === 2) ? (
             <LinkAccount />
-          ) : null} */}
-          <BookingRoomUser />
+          ) : null}
+          {tabActive === 1 && <BookingRoomUser />}
         </div>
       </div>
     </>

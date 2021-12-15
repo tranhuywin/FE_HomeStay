@@ -34,6 +34,10 @@ export default function EditProfile() {
                 <div className={Styles.ProfileInfoElement}>
                     <FranceInput textInput="Nam" titleInput="Giới Tính"></FranceInput>
                 </div>
+                <div style={{float: 'right', marginTop: "24px"}}>
+                <PrimaryButton text="Lưu thông tin"></PrimaryButton>
+                </div>
+               
             </div>
     )
 }
