@@ -27,6 +27,7 @@ function FranceInput(props) {
             className={Styles.Input}
             autoComplete="off"
             placeholder={textInput}
+            value={typeInput === "date" ? textInput : null}
             type={typeInput ? typeInput : "text"}
           />
           {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}

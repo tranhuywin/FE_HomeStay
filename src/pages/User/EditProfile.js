@@ -1,4 +1,4 @@
-import { PrimaryButton, FranceInput, Vietnam, PhoneNumberInput } from '../../components';
+import { PrimaryButton, FranceInput, Vietnam, PhoneNumberInput, FranceSelect } from '../../components';
 import Styles from './EditPRofile.module.scss';
 import Person from '../../assets/images/icons/PersonBlack.png';
 export default function EditProfile() {
@@ -29,13 +29,13 @@ export default function EditProfile() {
                     <FranceInput textInput="24 đường số 11, Linh Trung, Thủ Đức, Hồ Chí Minh" titleInput="Địa chỉ"></FranceInput>
                 </div>
                 <div className={Styles.ProfileInfoElement}>
-                    <FranceInput textInput="nguyenvanphap@gmail.com" titleInput="Ngày sinh" typeInput="date"></FranceInput>
+                    <FranceInput textInput="2000-02-09" titleInput="Ngày sinh" typeInput="date"></FranceInput>
                 </div>
                 <div className={Styles.ProfileInfoElement}>
-                    <FranceInput textInput="Nam" titleInput="Giới Tính"></FranceInput>
+                    <FranceSelect text="Nam" title="Giới Tính" options={[{text: "Nam", value: "Nam"}, {text: "Nữ", value: "Nữ"}, {text: "Khác", value: "Khác"}]}></FranceSelect>
                 </div>
                 <div style={{float: 'right', marginTop: "24px"}}>
-                <PrimaryButton text="Lưu thông tin"></PrimaryButton>
+                <PrimaryButton text="Lưu thông tin" disableButton={true}></PrimaryButton>
                 </div>
                
             </div>

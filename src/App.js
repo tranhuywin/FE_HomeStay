@@ -6,7 +6,6 @@ import {
   UserRoute,
 } from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-//import { Header, Footer } from "./components";
 import HeaderBrand from "./components/headers/headerBrand";
 import FooterCertification from "./components/footers/footerCertification";
 import { Provider } from "react-redux";
@@ -15,6 +14,7 @@ import FilterSlice from "./Redux/features/Filter/FilterSlice";
 
 function App() {
   const store = createStore(FilterSlice);
+  const routeHavenotFooter = ["/me"];
   return (
     <Router>
       <header>
@@ -36,18 +36,13 @@ function App() {
           </Route>
         </Provider>
       </Switch>
+      {!routeHavenotFooter.includes(window.location.pathname) && (
       <footer>
         <FooterCertification />
       </footer>
+      )}
     </Router>
   );
 }
-
-/// Router bi cai gi roi
-// Toi ::
-////// LAM XONG FILTER
-////// CATEGORY PAGE
-///// Elastic Search
-///// CMS Theme
 
 export default App;

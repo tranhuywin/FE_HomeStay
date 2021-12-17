@@ -6,7 +6,7 @@ import Twitter from '../../assets/images/icons/Twitter.png';
 export default function BlogDetail() {
     return (
         <div>
-            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            <img src="https://blog.ohanaliving.vn/content/images/size/w2000/2020/08/neonbrand-ZqqwJA71Ke4-unsplash.jpg"
                 alt="banner"
                 className={Styles.Banner}
             >
@@ -53,7 +53,7 @@ export default function BlogDetail() {
                             <ButtonBlog icon={UpArrow} />
                         </div>
                         <div className={Styles.ButtonsButton}>
-                            <ButtonBlog icon={Facebook} />
+                            <ButtonBlog icon={Facebook} href={"https://www.facebook.com/"} />
                         </div>
                         <div className={Styles.ButtonsButton}>
                             <ButtonBlog icon={Twitter} />

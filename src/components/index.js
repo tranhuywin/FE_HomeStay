@@ -16,6 +16,7 @@ export { default as MainCardBlog } from "./Atom/CardBlog/mainCard";
 export { default as ButtonBlog } from "./Atom/CardBlog/button";
 export { default as PrimaryButton } from "./button/PrimaryButton";
 export { default as PhoneNumberInput } from "./Atom/PhoneNumber/PhoneNumber";
+export { default as FranceSelect } from "./Atom/franceSelect";
 
 export { default as CheckBoxIcon } from "./Atom/SearchFilter/CheckBoxIcon";
 export { default as ListRoomPagination } from "./Room/Pagination/ListRoomPagination";

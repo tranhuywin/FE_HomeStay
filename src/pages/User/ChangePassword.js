@@ -1,4 +1,4 @@
-import { PrimaryButton, FranceInput } from '../../components';
+import { FranceInput, PrimaryButton } from '../../components';
 
 export default function ChangePassword() {
     return (
@@ -7,7 +7,7 @@ export default function ChangePassword() {
             <FranceInput textInput="********" titleInput="Mật khẩu mới" typeInput="password"></FranceInput>
             <FranceInput textInput="********" titleInput="Xác nhận mật khẩu mới" typeInput="password"></FranceInput>
             <div style={{float: 'right', marginTop: "2rem"}}>
-            <PrimaryButton text="Đổi mật khẩu"></PrimaryButton>
+            <PrimaryButton text="Đổi mật khẩu" disableButton={true}></PrimaryButton>
             </div>
 
             
