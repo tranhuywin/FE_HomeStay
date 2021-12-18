@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom";
-import { User, ChangePassword, LinkAccount } from "../../pages";
+import { User } from "../../pages";
 
 function UserRoute() {
   return <>

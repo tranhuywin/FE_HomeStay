@@ -4,6 +4,7 @@ import {
   RoomDetail,
   SearchResultRoute,
   UserRoute,
+  PostRealEstate
 } from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HeaderBrand from "./components/headers/headerBrand";
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/me">
             <UserRoute />
+          </Route>
+          <Route path="/post">
+            <PostRealEstate />
           </Route>
         </Provider>
       </Switch>

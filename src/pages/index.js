@@ -8,5 +8,6 @@ export { default as CreateRoom } from "./RoomManagement/CreateRoom";
 export { default as Blog } from "./Blog";
 export { default as BlogDetail } from "./Blog/blog-detail";
 export { default as User } from "./User";
-export {default as ChangePassword} from './User/ChangePassword';
-export {default as LinkAccount} from './User/LinkAccount';
+export { default as ChangePassword } from './User/ChangePassword';
+export { default as LinkAccount } from './User/LinkAccount';
+export { default as PostRealEstate } from './post-real-estate/post-real-estate';
