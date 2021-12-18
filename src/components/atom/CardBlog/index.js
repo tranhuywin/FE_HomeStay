@@ -1,6 +1,6 @@
 import Styles from './CardBlog.module.scss';
 import { Link } from 'react-router-dom';
-import userPNG from '../../../assets/images/icons/person.png';
+import userPNG from '../../../assets/images/icons/Person.svg';
 
 export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard, to}) {
     return (
