@@ -13,7 +13,6 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import FilterSlice from "./Redux/features/Filter/FilterSlice";
 import BookingRoom from "./pages/BookingRoom/BookingRoom";
-import Header from "./components/Header/Header";
 function App() {
   const store = createStore(FilterSlice);
   const routeHavenotFooter = ["/me", "home/login"];
@@ -21,20 +20,11 @@ function App() {
     "/me",
     "/rooms/result",
     "/search/rooms/result",
+    "/home"
   ];
-  console.log(window.location.pathname);
+  window.location.pathname === "/" && window.location.replace("/home");
   return (
     <Router>
-      {routeChooseHeaderBrand.includes(window.location.pathname) ? (
-        <header>
-          <Header />
-        </header>
-      ) : (
-        <header>
-          <HeaderBrand />
-        </header>
-      )}
-
       <Switch>
         <Provider store={store}>
           <Route path="/room">

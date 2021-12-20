@@ -69,10 +69,26 @@ blockquote {
 .Hero__des {
     font-size: 32px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 48px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
     width: 65rem;
+}
+.Hero__link{
+
+  width: 65rem;
+  position: absolute;
+  right: 0px;
+  float: right;
+  a{
+    margin: 0 1rem;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+  }
 }

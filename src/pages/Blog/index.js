@@ -1,5 +1,6 @@
 import {CardBlog, MainCardBlog} from "../../components";
 import BannerSignUp from '../../components/banner/bannerSignUp';
+import HeaderBrand from "../../components/headers/headerBrand";
 
 export default function Blog() {
     const blogs = [
@@ -117,6 +118,9 @@ export default function Blog() {
     ]
     return (
         <>
+        <header>
+            <HeaderBrand></HeaderBrand>
+        </header>
         <BannerSignUp />
         <div style={{display: 'flex', flexWrap: "wrap"}}>
             <MainCardBlog
