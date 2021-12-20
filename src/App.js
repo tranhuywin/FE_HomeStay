@@ -21,6 +21,7 @@ function App() {
     "/me",
     "/rooms/result",
     "/search/rooms/result",
+    "/home",
   ];
   console.log(window.location.pathname);
   return (

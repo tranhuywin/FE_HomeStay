@@ -41,7 +41,7 @@ function HostDetail(props) {
       </div>
       <div
         className="button_wrap"
-        style={{ marginTop: "4.8rem", width: "40%", margin: "0 auto" }}
+        style={{ marginTop: "4.8rem", width: "40%", margin: "0.8rem  auto" }}
       >
         <FranceButton
           textInput={"Đặt phòng ngay"}

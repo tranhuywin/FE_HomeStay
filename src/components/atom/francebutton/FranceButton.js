@@ -8,7 +8,9 @@ function FranceButton(props) {
     backgroundColorButton,
     colorText,
     typeHover,
+    widthCom,
   } = props;
+  let width = widthCom ? widthCom : "100%";
   // 1 hover text
   // 2  hover background
   const [HoverSelected, setHoverSelected] = useState();
@@ -29,7 +31,7 @@ function FranceButton(props) {
   };
 
   return (
-    <div className={Styles.FranceButtonBlock}>
+    <div className={Styles.FranceButtonBlock} style={{ width }}>
       <div className={Styles.FranceButtonWrap}>
         <div className={Styles.TextButtonWrap}>
           <div className={Styles.ButtonWrap}>

@@ -11,7 +11,7 @@ import {
 import { FormatMoneyByCateMotel } from "../../../helpers";
 
 import { Link } from "react-router-dom";
-
+import BedIcon from "@mui/icons-material/Bed";
 function RoomItemH(props) {
   const isConfirmedIcon = require(`../../../assets/images/icons/confirmed/confirmed.png`);
   const {
@@ -63,20 +63,16 @@ function RoomItemH(props) {
                 style={{ marginBottom: "1.6rem" }}
               >
                 <TextIcon
-                  iconComponent={<AllSexIcon />}
-                  Text={
-                    sex_allowed === "any"
-                      ? "Nam & Nữ"
-                      : sex_allowed === "male"
-                      ? "Nam"
-                      : "Nữ"
+                  iconComponent={
+                    <BedIcon style={{ transform: "scale(1.5)" }} />
                   }
+                  Text={"2 giường"}
                   styleTextName={"text_information"}
                   styleComponent={{ marginRight: "3.2rem" }}
                 />
                 <TextIcon
                   iconComponent={<RulerIcon />}
-                  Text={square}
+                  Text={square + " m2"}
                   styleTextName={"text_information"}
                 />
               </div>

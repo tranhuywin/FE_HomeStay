@@ -22,7 +22,7 @@ function Register() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "20%",
+      top: "15%",
     },
   };
   return (

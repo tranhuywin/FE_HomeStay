@@ -1,8 +1,8 @@
 import React from "react";
-import "./Modal.scss";
-function Modal({ style, children }) {
+import Styles from "./index.module.scss";
+function Modal({ styleClass, children }) {
   return (
-    <div className="modal" style={style}>
+    <div className={Styles.Modal} style={styleClass}>
       {children}
     </div>
   );
