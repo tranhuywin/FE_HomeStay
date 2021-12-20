@@ -201,14 +201,14 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
 
   return (
     <div className="basic_info" style={{padding: "28px 0 28px 28px"}}>
-      <h1>THÔNG TIN CƠ BẢN</h1>
+      <h1 style={{color: "#02AAB0"}}>THÔNG TIN CƠ BẢN</h1>
       <p>
-        Tiêu đề <span>*</span>
+        Tên chủ phòng <span>*</span>
       </p>
       <input
         type="text"
         pattern="[A-Za-z0-9_-\s.]{30,99}"
-        placeholder="Nhập tiêu đề tin đăng của bạn. Tối thiểu là 30 ký tự và tối đa là 99 ký tự."
+        placeholder="Nhập tên"
         className="input_title"
         {...register("title")}
         maxLength="99"
@@ -224,38 +224,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
       <div className="select_container">
         <div className="left">
           <p>
-            Hình thức <span>*</span>
+            Số điện thoại chủ phòng <span>*</span>
           </p>
           <div className="select__items">
-            <select
-              className={`${styleCate}`}
-              {...register("category")}
-              onClick={(e) => {
-                handleFetchCategory();
-              }}
-              onChange={(e) => {
-                setStateCate(e.target.value);
-                setIdCategory(e.target.value);
-                if (e.target.value == "none") {
-                  setStyleCate("option_disable");
-                } else {
-                  setStyleCate("option_able");
-                }
-              }}
-            >
-              <option value="none" className="option_disable">
-                Chọn hình thức
-              </option>
-
-              {category &&
-                category.map((item) => {
-                  return (
-                    <option key={item._id} value={`${item._id},${item.name}`}>
-                      {item.name}
-                    </option>
-                  );
-                })}
-            </select>
+          <input
+            type="number"
+            placeholder="Nhập tiền đặt cọc"
+            className="input_items input_price"
+            {...register("unitPrice")}
+          />
           </div>
           <p className={errors.category?.message ? "active" : "non-active"}>
             {errors.category?.message}
@@ -263,37 +240,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
         </div>
         <div className="right">
           <p>
-            Loại <span>*</span>
+            Sức chứa <span>*</span>
           </p>
           <div className="select__items">
-            <select
-              className={`${styleType}`}
-              {...register("type")}
-              onClick={() => {
-                handleFetchType();
-              }}
-              onChange={(e) => {
-                handleChangeType(e.target.value);
-                if (e.target.value == "none") {
-                  setStyleType("option_disable");
-                } else {
-                  setStyleType("option_able");
-                }
-              }}
-            >
-              <option value="none" className="option_disable">
-                Chọn loại bất động sản
-              </option>
-
-              {type &&
-                type.map((item, index) => {
-                  return (
-                    <option key={item._id} value={index}>
-                      {item.name}
-                    </option>
-                  );
-                })}
-            </select>
+          <input
+            type="number"
+            placeholder="Nhập sức chứa"
+            className="input_items input_price"
+            {...register("unitPrice")}
+          />
           </div>
           <p className={errors.type?.message ? "active" : "non-active"}>
             {errors.type?.message}
@@ -490,15 +445,12 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
       )}
       <div className="select_container">
         <div className="left">
-          <p>Dự án </p>
+          <p>Giá </p>
           <div className="select__items">
             <input
               {...register("project")}
-              placeholder="Nhập tên dự án"
+              placeholder="Nhập giá phòng"
               className="input_items"
-              onChange={(e) => {
-                handleGetNameProject(e.target.value);
-              }}
             />
           </div>
         </div>
@@ -508,125 +460,22 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
           </p>
           <input
             type="number"
-            placeholder="Nhập diện tích bất động sản"
+            placeholder="Nhập diện tích phòng"
             className="input_items"
             {...register("square")}
-            onChange={(e) => {
-              setAreaReal(e.target.value);
-            }}
           />
         </div>
       </div>
       <div className="select_container">
         <div className="left">
-          <p>Giá </p>
+          <p>Tiền đặt cọc </p>
           <input
             type="number"
-            placeholder="Nhập giá bất động sản"
+            placeholder="Nhập tiền đặt cọc"
             className="input_items input_price"
             {...register("unitPrice")}
-            onChange={(e) => {
-              setPriceReal(e.target.value);
-            }}
           />
         </div>
-        <div className="right">
-          <p>
-            Đơn vị <span>*</span>
-          </p>
-          {stateCate && stateCate !== "1" ? (
-            <div className="select__items ">
-              <select
-                className={`${styleUnit}`}
-                {...register("unit")}
-                onChange={(e) => {
-                  setUnitReal(e.target.value);
-                  if (e.target.value == "") {
-                    setStyleUnit("option_disable");
-                  } else {
-                    setStyleUnit("option_able");
-                  }
-                }}
-                disabled
-                value={stateCate == "6193a1e36a03d69a07417779,Nhà đất bán" ? "VNĐ" : "VNĐ/Tháng"}
-              >
-                {stateCate == "6193a1e36a03d69a07417779,Nhà đất bán" ? (
-                  <>
-                    <option value="VNĐ" selected>VNĐ</option>
-                    <option value="thoathuan">Thoả thuận</option>
-                    <option value="USD">USD</option>
-                  </>
-                ) : (
-                  <>
-                    <option value="VNĐ/Tháng" selected>VNĐ/Tháng</option>
-                    <option value="thoathuan">Thoả thuận</option>
-                    <option value="USD/tháng">USD/Tháng</option>
-                  </>
-                )}
-              </select>
-            </div>
-          ) : (
-            <Fragment>
-              <div className="select__items ">
-                <select
-                  className={`${styleUnit} `}
-                  {...register("unit")}
-                  onChange={(e) => {
-                    setUnitReal(e.target.value);
-                    if (e.target.value == "") {
-                      setStyleUnit("option_disable");
-                    } else {
-                      setStyleUnit("option_able");
-                    }
-                  }}
-                >
-                  <option value="" className="option_disable">
-                    Chọn đơn vị
-                  </option>
-                </select>
-              </div>
-              <p className={errors.unit?.message ? "active" : "non-active"}>
-                {errors.unit?.message}
-              </p>
-            </Fragment>
-          )}
-        </div>
-      </div>
-      <div className="select_container">
-        {unitReal !== "thoathuan" ? (
-          <p>
-            Tổng tiền :{" "}
-            <input
-              className="priceTotal"
-              {...register("totalPrice")}
-              placeholder={`${price} ${unitReal}`}
-              disabled
-            />
-          </p>
-        ) : (
-          <p>
-            Tổng tiền :{" "}
-            <input
-              className="priceTotal"
-              {...register("totalPrice")}
-              placeholder="Thỏa thuận"
-              disabled
-            />
-          </p>
-        )}
-        <p>
-          Địa chỉ <span>*</span>
-        </p>
-        <input
-          disabled
-          type="text"
-          placeholder="Tên dự án + Quận/Huyện + Tỉnh/Thành phố"
-          className="input_title"
-          value={detailAddress}
-        />
-        <p className={errors.address?.message ? "active" : "non-active"}>
-          {errors.address?.message}
-        </p>
       </div>
     </div>
   );

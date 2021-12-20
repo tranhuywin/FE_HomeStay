@@ -62,7 +62,7 @@ const Image = ({ files, setFiles, fileLength }) => {
 
   return (
     <div className="image__container">
-      <h3 className="image__title">HÌNH ẢNH</h3>
+      <h3 className="image__title"  style={{color: "#02AAB0"}}>HÌNH ẢNH</h3>
       <div className="image__tab-container">
         <div className="image__tab-item image__tab-selected">
         </div>
@@ -76,7 +76,7 @@ const Image = ({ files, setFiles, fileLength }) => {
           ) : (
             <p className="item__content-text">
               Kéo thả ảnh vào đây hoặc nhấn
-              <span className="text-primary item__content-btn"> thêm ảnh</span>
+              <span className="item__content-btn"  style={{color: "#02AAB0"}}> thêm ảnh</span>
             </p>
           )}
         </div>
@@ -85,7 +85,7 @@ const Image = ({ files, setFiles, fileLength }) => {
           {thumbs}
           {fileLength >= 8 ? null : (
             <div {...getRootProps()} className="image__drop-zone">
-              <input {...getInputProps()} />
+              <input {...getInputProps()} style={{border: "1px solid #02AAB0;"}}/>
               {isDragActive ? (
                 <p className="image__drop-zone-text text-primary">
                   {" "}

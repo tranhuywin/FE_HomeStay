@@ -1,25 +1,23 @@
-import React from "react";
 import "./InformationRoom.scss";
 import "./UtilitiesInformation.scss";
 import { GetUrlImgUtil } from "../../../../helpers";
 import Constant from "../../../../common/Constant";
 import { TextIcon } from "../../../../components/index";
 import HeadingIcon from "../Atom/HeadingIcon";
-
 import UtilityIcon from "../../../../assets/images/icons/common/UtilityIcon";
 
 function UtilitiesInformation(props) {
-  const { util_list } = props;
+  const { util_list, isNotIconText, isDisabled } = props;
 
-  const styleComponent = { margin: "2.4rem 0", width: "calc(100%/4)" };
+  const styleComponent = { margin: "2.4rem 0", width: "calc(100%/6)" };
   return (
     <div className="information_room_detail">
-      <HeadingIcon
+      {!isNotIconText ? <HeadingIcon
         nameTitle={"Tiện ích"}
         iconComponent={
-          <UtilityIcon sizeIcon={{ height: "32px", width: "32px" }} />
+         <UtilityIcon sizeIcon={{ height: "32px", width: "32px"}} />
         }
-      />
+      />: <h1 style={{color: "#02AAB0"}}>Tiện ích</h1>}
 
       <div className="list_information">
         {util_list.map((util) => {
@@ -34,6 +32,7 @@ function UtilitiesInformation(props) {
               styleComponent={styleComponent}
               styleTextName={"text_icon"}
               iconComponent={<Icon />}
+              isDisabled={isDisabled}
             />
           );
         })}

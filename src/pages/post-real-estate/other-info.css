@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito';
 }
 
 .text-red {
@@ -288,6 +289,7 @@ input::-webkit-inner-spin-button {
 .image__content{
     align-items: center;
     justify-content: center;
+    border: 1px solid #02AAB0;
 }
 
 .item__content-text{
@@ -383,7 +385,7 @@ input::-webkit-inner-spin-button {
 h1.post__title {
     font-size: 24px;
     font-weight: 700;
-    color: rgba(161, 132, 116, 1);
+    color: #02AAB0;
     margin-bottom:13px;
     margin-top: 24px;
 }
