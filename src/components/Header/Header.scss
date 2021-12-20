@@ -35,17 +35,47 @@
 .popup .login,
 .popup .register,
 .popup .upload_room {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   a {
     color: #000;
     transition: 0.3s;
     &:hover {
-      color: #ff5fa2;
+      color: #02aab0;
     }
   }
 }
 
 .popup .register {
   margin-left: 2rem;
+}
+
+.line {
+  height: 4rem;
+  background-color: #02aab0;
+}
+
+.dflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.dflex1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.text-style {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  margin-left: 0.4rem;
 }

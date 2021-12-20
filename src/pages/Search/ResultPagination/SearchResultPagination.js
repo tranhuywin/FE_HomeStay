@@ -30,7 +30,6 @@ function SearchResultPagination(props) {
       ...body,
       ...filters,
     };
-    console.log(body);
     let response = await postAxiosPayloadData(
       `${Constant.url}/motel/search/filter`,
       {},
@@ -57,6 +56,7 @@ function SearchResultPagination(props) {
   }
 
   const allRooms = dataRooms.data;
+  console.log(allRooms);
   return (
     <div className="list_room_pagination">
       <WidgetHeading

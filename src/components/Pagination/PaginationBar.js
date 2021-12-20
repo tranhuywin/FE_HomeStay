@@ -26,7 +26,7 @@ function PaginationBar(props) {
         {tempNumberArr.map((number) => {
           return (
             <li className={`page_number`} onClick={() => ChangeNumPage(number)}>
-              <span className={`${currentPage === number && "active"}`}>
+              <span className={`${currentPage === number && "actived"}`}>
                 {number}
               </span>
             </li>
