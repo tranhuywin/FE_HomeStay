@@ -287,7 +287,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
               <option value="" className="option_disable">
                 Chọn tỉnh/thành phố
               </option>
-
+              <option value="" className="option_disable">
+                  Thành Phố Hồ Chí Minh
+                </option>
+                <option value="" className="option_disable">
+                  Hà Nội
+                </option>
+                <option value="" className="option_disable">
+                  Đà Nẵng
+                </option>
               {city &&
                 city.map((item) => {
                   return (
@@ -330,7 +338,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
               <option value="" className="option_disable">
                 Chọn quận/huyện
               </option>
-
+              <option value="" className="option_disable">
+                Quận 1
+              </option>
+              <option value="" className="option_disable">
+              Quận 2
+              </option>
+              <option value="" className="option_disable">
+              Quận 3
+              </option>
               {district &&
                 district.map((item) => {
                   return (
@@ -378,14 +394,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
                   Chọn phường/xã
                 </option>
 
-                {ward &&
-                  ward.map((item) => {
-                    return (
-                      <option key={item._id} value={item._id}>
-                        {item.name}
-                      </option>
-                    );
-                  })}
+                <option value="" className="option_disable">
+                  phường 1
+                </option>
+                <option value="" className="option_disable">
+                phường 2
+                </option>
+                <option value="" className="option_disable">
+                phường 3
+                </option>
               </select>
             </div>
             <p className={errors.ward_Id?.message ? "active" : "non-active"}>
@@ -421,6 +438,7 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
                 <option value="" className="option_disable">
                   Chọn phường/xã
                 </option>
+               
               </select>
             </div>
             <p className={errors.ward_Id?.message ? "active" : "non-active"}>

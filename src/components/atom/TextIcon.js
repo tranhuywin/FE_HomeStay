@@ -20,7 +20,7 @@ function TextIcon(props) {
   return (
     <div className={`text_icon`} style={styleComponent} onClick={handleClick}>
       {!!iconComponent && iconComponent}
-      <p style={!isClick ? styleTitleName : {...styleTitleName,color: "#02AAB0"}}
+      <p style={!isClick ? styleTitleName : {...styleTitleName,color: "#02AAB0", fontWeight: 700}}
        className={styleTextName}>
         {Text}
       </p>

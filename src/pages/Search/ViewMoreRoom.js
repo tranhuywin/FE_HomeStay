@@ -2,7 +2,7 @@ import React from "react";
 import "./ViewMoreRoom.scss";
 import { HeadingDropdown, ListView, FilterFeature } from "./Dropdown";
 import { ListRoomPagination } from "../../components";
-
+import {Header} from '../../components';
 function ViewMoreRoom(props) {
   const { type } = props;
 
@@ -13,6 +13,10 @@ function ViewMoreRoom(props) {
   }
 
   return (
+    <>
+    <header>
+      <Header></Header>
+    </header>
     <div className="view_more_result">
       <div className="container">
         <div className="row">
@@ -21,6 +25,7 @@ function ViewMoreRoom(props) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

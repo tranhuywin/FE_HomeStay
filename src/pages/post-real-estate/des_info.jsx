@@ -13,7 +13,7 @@ const DesInfo = () => {
       <div className="describe_info" style={{padding: "28px 0 0 28px", marginTop: "32px"}}>
         <h1 style={{color: "#02AAB0"}}>THÔNG TIN MÔ TẢ</h1>
         <p>
-          Giới thiệu bất động sản <span>*</span>
+          Giới thiệu homestay <span>*</span>
         </p>
         <textarea
           row="5"

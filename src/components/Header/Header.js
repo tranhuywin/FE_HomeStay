@@ -31,7 +31,6 @@ function Header(props) {
           </div>
         </div>
       </div>
-      {!window.location.pathname === "/home" ?(
         <div className="header">
         <div className="container">
           <div className="logo_search">
@@ -43,23 +42,21 @@ function Header(props) {
             <Search />
             <div className="popup">
               <div className="upload_room">
-                <Link to="/home/blog">Blog</Link>
+                <Link to="/home/blog" style={{fontWeight: 700}}>Blog</Link>
               </div>
               <div className="upload_room">
-                <Link to="/home/create/room">Đăng phòng</Link>
+                <Link to="/booking-room" style={{fontWeight: 700}}>Đặt phòng</Link>
               </div>
               <div className="login">
-                <Link to="/home/login">Đăng Nhập</Link>
+                <Link to="/login" style={{fontWeight: 700}}>Đăng Nhập</Link>
               </div>
               <div className="register">
-                <Link to="/home/register">Đăng kí</Link>
+                <Link to="/register" style={{fontWeight: 700}}>Đăng kí</Link>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      ): ''}
-      
+      </div>      
     </>
   );
 }

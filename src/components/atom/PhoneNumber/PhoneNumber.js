@@ -30,6 +30,7 @@ function PhoneNumber(props) {
               type="text"
               autoComplete="off"
               placeholder={"84+"}
+              value="+84"
             />
 
             {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}

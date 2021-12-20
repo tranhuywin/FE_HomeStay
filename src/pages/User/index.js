@@ -9,7 +9,7 @@ import BookingRoomUser from "./components/BookingRoom";
 import { useState } from "react";
 import FranceInput from "../../components/Atom/franceinput/franceinput";
 import FranceButton from "../../components/Atom/francebutton/FranceButton";
-
+import {HeaderUser} from './../../components';
 // page = 0  thông tin tài khoản
 // page = 1 Đổi mật khẩu
 // page = 3 Liên kết tài khoản\
@@ -17,9 +17,11 @@ import FranceButton from "../../components/Atom/francebutton/FranceButton";
 export default function User() {
   const [page, setPage] = useState(0);
   const [tabActive, setTabActive] = useState(0);
-
   return (
     <>
+      <header>
+        <HeaderUser></HeaderUser>
+      </header>
       <div className={Styles.TabHeader}>
         <div className={Styles.TabHeaderWrap}>
           <div className={Styles.TabHeaderContent}>
@@ -29,9 +31,8 @@ export default function User() {
                 className={`${Styles.ProfileTab} ${Styles.CommonTitle}`}
               >
                 <p
-                  className={`${Styles.Title} ${
-                    tabActive === 0 ? Styles.ActiveTab : ""
-                  }`}
+                  className={`${Styles.Title} ${tabActive === 0 ? Styles.ActiveTab : ""
+                    }`}
                 >
                   Thông tin người dùng
                 </p>
@@ -41,9 +42,8 @@ export default function User() {
                 className={`${Styles.BookingRoomTab} ${Styles.CommonTitle}`}
               >
                 <p
-                  className={`${Styles.Title} ${
-                    tabActive === 1 ? Styles.ActiveTab : ""
-                  }`}
+                  className={`${Styles.Title} ${tabActive === 1 ? Styles.ActiveTab : ""
+                    }`}
                 >
                   Đặt chỗ của tôi
                 </p>

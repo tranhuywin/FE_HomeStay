@@ -6,7 +6,7 @@ export default function CardBlog({title, srcImg, dateAgo, timeReading, styleCard
     return (
         <Link className={Styles.BlogWapper} style={styleCard} to={to}>
             <div className={Styles.BlogWapperImage}>
-                <img src={srcImg} alt="" />
+                <img src={srcImg} alt="" style={{height: "214px"}} />
                 <div className={Styles.BlogWapperImageUser}>
                     <img src={userPNG} alt="user"></img>
                 </div>
