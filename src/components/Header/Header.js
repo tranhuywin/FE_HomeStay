@@ -1,10 +1,12 @@
 import React from "react";
 import "./Header.scss";
-import logo from "../../assets/images/logo_size.png";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Search } from "../index";
 import Download from "../../assets/download.js";
 import Home from "../../assets/home.js";
+import Styles from "../headers/headerBrand.module.scss";
+
 function Header(props) {
   return (
     <>
@@ -13,13 +15,13 @@ function Header(props) {
           <div className="left"></div>
           <div className="right" style={{ flexBasis: "60%" }}>
             <div className="dflex1">
-              <div style={{ marginLeft: "1rem", flexBasis: "10%" }}>
+              <div style={{ marginLeft: "1rem", flexBasis: "10%", cursor: "pointer" }}>
                 <div style={{ display: "flex" }}>
                   <Download />
                   <p className="text-style">Tải App</p>
                 </div>
               </div>
-              <div style={{ marginRight: "1rem", flexBasis: "25%" }}>
+              <div style={{ marginRight: "1rem", flexBasis: "25%", cursor: "pointer" }}>
                 <div style={{ display: "flex" }}>
                   <Home />
                   <p className="text-style">Đăng phòng dễ dàng</p>
@@ -29,13 +31,14 @@ function Header(props) {
           </div>
         </div>
       </div>
-      <div className="header">
+      {!window.location.pathname === "/home" ?(
+        <div className="header">
         <div className="container">
           <div className="logo_search">
             <div className="logo">
-              <Link to="/home">
-                <img src={logo} alt="" />
-              </Link>
+            <Link className={Styles.HeaderBrand} style={{paddingleft: "0 !important"}} to="/home" >
+                FranceStay
+            </Link>
             </div>
             <Search />
             <div className="popup">
@@ -55,6 +58,8 @@ function Header(props) {
           </div>
         </div>
       </div>
+      ): ''}
+      
     </>
   );
 }

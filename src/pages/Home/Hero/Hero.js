@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Hero.scss";
 import $ from "jquery";
 import { SnakeLoading } from "../../../components/Loading";
+import { Search } from "../../../components"
+import { Link } from "react-router-dom"
+
 export default class Quote extends Component {
   constructor(props) {
     super(props);
@@ -93,31 +96,32 @@ export default class Quote extends Component {
       <div
         className="banner-blockquote"
         style={{
-          backgroundImage: `url(${
-            require("../../../assets/images/banner/banner.jpg").default
-          })`,
+          backgroundImage: `url(https://www.ohanaliving.vn/542ac03681516bcca0dd605bedd41a2b.jpg)`,
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
+          height: "50rem",
         }}
       >
         <div className="container">
-          <blockquote>
-            <q id="quote">
-              {this.state.quotes === []
-                ? null
-                : this.state.quotes[numRanQuote].text}
-            </q>
-            <address id="author">
-              {this.state.quotes === []
-                ? null
-                : this.state.quotes[numRanQuote].author}
-            </address>
-            <button className="js-randomQuotes" id="js-randomQuotes">
-              Randome Quotes
-            </button>
-          </blockquote>
+          <h1 className="Hero__title">FranceStay</h1>
+          <div className="Hero__link">
+            <Link to="/home/blog">Blog</Link>
+            <Link to="/booking-room">Đặt phòng</Link>
+            <Link to="/login">Đăng nhập</Link>
+            <Link to="register">Đăng ký</Link>
+          </div>
+
+          <p className="Hero__des" style={{ marginBottom: "15px", marginTop: "15px" }}>Ứng dụng tìm kiếm homestay miễn phí cho người đi thuê hàng đầu Việt Nam</p>
+          <div style={{ width: "520px" }}>
+            <Search styles={{ height: "50px" }} />
+          </div>
+          <p className="Hero__des" style={{ fontSize: "24px", marginTop: "18px" }}>Tải app ngay để có trải nghiệm tuyệt vời !</p>
+          <div style={{ float: "left" }}>
+            <img src="https://www.ohanaliving.vn/3f9605492bb7388bbc16f25a16778cbc.png" alt="download" style={{ width: "172px", height: "50px" }}></img>
+            <img src="https://www.ohanaliving.vn/137381da1471b1c2ad438c213a34b0a4.png" alt="download" style={{ width: "172px", height: "50px", marginLeft: "10px" }}></img>
+          </div>
         </div>
       </div>
     );
