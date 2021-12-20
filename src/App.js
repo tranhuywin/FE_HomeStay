@@ -4,7 +4,7 @@ import {
   RoomDetail,
   SearchResultRoute,
   UserRoute,
-  PostRealEstate
+  PostRealEstate,
 } from "./routes/routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HeaderBrand from "./components/headers/headerBrand";
@@ -12,19 +12,23 @@ import FooterCertification from "./components/footers/footerCertification";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import FilterSlice from "./Redux/features/Filter/FilterSlice";
-
+import BookingRoom from "./pages/BookingRoom/BookingRoom";
+import Header from "./components/Header/Header";
 function App() {
   const store = createStore(FilterSlice);
   const routeHavenotFooter = ["/me"];
   return (
     <Router>
       <header>
-        <HeaderBrand />
+        <Header />
       </header>
       <Switch>
         <Provider store={store}>
           <Route path="/room">
             <RoomDetail />
+          </Route>
+          <Route path="/booking-room">
+            <BookingRoom />
           </Route>
           <Route path="/search">
             <SearchResultRoute />
@@ -41,9 +45,9 @@ function App() {
         </Provider>
       </Switch>
       {!routeHavenotFooter.includes(window.location.pathname) && (
-      <footer>
-        <FooterCertification />
-      </footer>
+        <footer>
+          <FooterCertification />
+        </footer>
       )}
     </Router>
   );

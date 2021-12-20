@@ -3,6 +3,7 @@ import HeadingIcon from "../Atom/HeadingIcon";
 import "./HostDetail.scss";
 import { UserIcon } from "../../../../assets/images/icons";
 import { FormatDateTime } from "../../../../helpers";
+import FranceButton from "../../../../components/Atom/francebutton/FranceButton";
 function HostDetail(props) {
   const {
     host_data: {
@@ -37,6 +38,16 @@ function HostDetail(props) {
         <div className="datetime">
           <span>Ngày đăng: {FormatDateTime(created_date)}</span>
         </div>
+      </div>
+      <div
+        className="button_wrap"
+        style={{ marginTop: "4.8rem", width: "40%", margin: "0 auto" }}
+      >
+        <FranceButton
+          textInput={"Đặt phòng ngay"}
+          typeHover={2}
+          colorText={"#fff"}
+        />
       </div>
     </div>
   );
