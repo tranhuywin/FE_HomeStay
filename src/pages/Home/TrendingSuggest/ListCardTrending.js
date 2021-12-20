@@ -7,8 +7,8 @@ function ListCardTrending() {
   return (
     <div className="trending_research">
       <WidgetHeading
-        Text={"Xu hướng tìm kiếm"}
-        styleTitleName={{ fontSize: "3.2rem" }}
+        Text={"Địa điểm nổi bật"}
+        styleTitleName={{ fontSize: "2.4rem" }}
       />
       <div className="list_suggest_district">
         {Constant.city.district.map((district) => {

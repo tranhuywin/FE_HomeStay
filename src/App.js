@@ -16,12 +16,25 @@ import BookingRoom from "./pages/BookingRoom/BookingRoom";
 import Header from "./components/Header/Header";
 function App() {
   const store = createStore(FilterSlice);
-  const routeHavenotFooter = ["/me"];
+  const routeHavenotFooter = ["/me", "home/login"];
+  const routeChooseHeaderBrand = [
+    "/me",
+    "/rooms/result",
+    "/search/rooms/result",
+  ];
+  console.log(window.location.pathname);
   return (
     <Router>
-      <header>
-        <Header />
-      </header>
+      {routeChooseHeaderBrand.includes(window.location.pathname) ? (
+        <header>
+          <Header />
+        </header>
+      ) : (
+        <header>
+          <HeaderBrand />
+        </header>
+      )}
+
       <Switch>
         <Provider store={store}>
           <Route path="/room">

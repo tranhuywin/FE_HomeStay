@@ -39,8 +39,12 @@ function ListRoom(props) {
   return (
     <div className="list_new_room share_style">
       <WidgetHeading
-        Text={"Phòng mới nhất"}
-        styleComponent={{ paddingBottom: "4.8rem", backgroundColor: "#ffffff" }}
+        Text={"Gợi ý từ FranceStay"}
+        styleComponent={{
+          paddingBottom: "4.8rem",
+          backgroundColor: "#ffffff",
+          fontSize: "2.4rem",
+        }}
         viewAllText={moreBtn !== undefined ? moreBtn : true}
         pathLink={"/search/view-all/new-rooms"}
       />

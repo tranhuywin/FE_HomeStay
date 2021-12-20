@@ -46,14 +46,14 @@ function RoomItemH(props) {
         </div>
         <div className="information_detail_room">
           <div className="title">
-            <p className="room_title">{name_motel}</p>
+            <p className="room_title">Chilling France Sunny</p>
           </div>
           <div className="information">
             <div className="detail_information">
               <div className="cate_room">
                 <TextIcon
                   iconComponent={<HomeIcon />}
-                  Text={cate_name}
+                  Text={"Căn hộ dịch vụ"}
                   styleComponent={{ marginBottom: "1.6rem" }}
                   styleTextName={"text_information"}
                 />

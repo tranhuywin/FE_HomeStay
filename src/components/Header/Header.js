@@ -3,32 +3,59 @@ import "./Header.scss";
 import logo from "../../assets/images/logo_size.png";
 import { Link } from "react-router-dom";
 import { Search } from "../index";
-
+import Download from "../../assets/download.js";
+import Home from "../../assets/home.js";
 function Header(props) {
   return (
-    <div className="header">
-      <div className="container">
-        <div className="logo_search">
-          <div className="logo">
-            <Link to="/home">
-              <img src={logo} alt="" />
-            </Link>
-          </div>
-          <Search />
-          <div className="popup">
-            <div className="upload_room">
-              <Link to="/home/create/room">Đăng phòng</Link>
-            </div>
-            <div className="login">
-              <Link to="/home/login">Đăng Nhập</Link>
-            </div>
-            <div className="register">
-              <Link to="/home/register">Đăng kí</Link>
+    <>
+      <div class="line">
+        <div className="dflex">
+          <div className="left"></div>
+          <div className="right" style={{ flexBasis: "60%" }}>
+            <div className="dflex1">
+              <div style={{ marginLeft: "1rem", flexBasis: "10%" }}>
+                <div style={{ display: "flex" }}>
+                  <Download />
+                  <p className="text-style">Tải App</p>
+                </div>
+              </div>
+              <div style={{ marginRight: "1rem", flexBasis: "25%" }}>
+                <div style={{ display: "flex" }}>
+                  <Home />
+                  <p className="text-style">Đăng phòng dễ dàng</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="header">
+        <div className="container">
+          <div className="logo_search">
+            <div className="logo">
+              <Link to="/home">
+                <img src={logo} alt="" />
+              </Link>
+            </div>
+            <Search />
+            <div className="popup">
+              <div className="upload_room">
+                <Link to="/home/blog">Blog</Link>
+              </div>
+              <div className="upload_room">
+                <Link to="/home/create/room">Đăng phòng</Link>
+              </div>
+              <div className="login">
+                <Link to="/home/login">Đăng Nhập</Link>
+              </div>
+              <div className="register">
+                <Link to="/home/register">Đăng kí</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
