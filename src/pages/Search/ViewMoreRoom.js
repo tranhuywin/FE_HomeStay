@@ -17,7 +17,7 @@ function ViewMoreRoom(props) {
     <header>
       <Header></Header>
     </header>
-    <div className="view_more_result">
+    <div className="view_more_result" style={{backgroundColor: "#f6f5f2", paddingBottom:"65px"}}>
       <div className="container">
         <div className="row">
           <FilterFeature />

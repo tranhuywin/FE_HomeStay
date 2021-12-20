@@ -10,7 +10,7 @@ import Styles from "../headers/headerBrand.module.scss";
 function Header(props) {
   return (
     <>
-      <div class="line">
+      <div class="header__line">
         <div className="dflex">
           <div className="left"></div>
           <div className="right" style={{ flexBasis: "60%" }}>
@@ -24,7 +24,7 @@ function Header(props) {
               <div style={{ marginRight: "1rem", flexBasis: "25%", cursor: "pointer" }}>
                 <div style={{ display: "flex" }}>
                   <Home />
-                  <p className="text-style">Đăng phòng dễ dàng</p>
+                  <Link to="/post" className="text-style">Đăng phòng dễ dàng</Link>
                 </div>
               </div>
             </div>

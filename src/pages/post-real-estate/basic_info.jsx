@@ -438,7 +438,15 @@ const BasicInfo = ({ setTypeSelected, totalPrice, setTotalPrice }) => {
                 <option value="" className="option_disable">
                   Chọn phường/xã
                 </option>
-               
+                <option value="" className="option_disable">
+                  Phường 1
+                </option>
+                <option value="" className="option_disable">
+                Phường 2
+                </option>
+                <option value="" className="option_disable">
+                Phường 3
+                </option>
               </select>
             </div>
             <p className={errors.ward_Id?.message ? "active" : "non-active"}>

@@ -58,39 +58,35 @@ export default class Quote extends Component {
     setInterval(loopQuote, 15000);
   }
 
-  async componentDidMount() {
-    // if (localStorage.quotes == null) {
-    let url = "https://type.fit/api/quotes";
-    let response = await fetch(url);
-    let data = await response.json();
+  // async componentDidMount() {
+  //   // if (localStorage.quotes == null) {
+  //   let url = "https://type.fit/api/quotes";
+  //   let response = await fetch(url);
+  //   let data = await response.json();
 
-    this.setState((state) => ({
-      loading: true,
-      quotes: data,
-    }));
+  //   this.setState((state) => ({
+  //     loading: true,
+  //     quotes: data,
+  //   }));
 
-    let loopQuote = setInterval(
-      () =>
-        this.RandomQuotes(
-          "quote",
-          "author",
-          true,
-          this.state.quotes,
-          loopQuote
-        ),
-      15000
-    );
+  //   let loopQuote = setInterval(
+  //     () =>
+  //       this.RandomQuotes(
+  //         "quote",
+  //         "author",
+  //         true,
+  //         this.state.quotes,
+  //         loopQuote
+  //       ),
+  //     15000
+  //   );
 
-    $("#js-randomQuotes").click(() =>
-      this.RandomQuotes("quote", "author", true, this.state.quotes, loopQuote)
-    );
-  }
+  //   $("#js-randomQuotes").click(() =>
+  //     this.RandomQuotes("quote", "author", true, this.state.quotes, loopQuote)
+  //   );
+  // }
 
   render() {
-    if (this.state.loading === false) {
-      return <SnakeLoading />;
-    }
-    let numRanQuote = Math.floor(Math.random() * 1643);
 
     return (
       <div
@@ -108,7 +104,7 @@ export default class Quote extends Component {
           <h1 className="Hero__title">FranceStay</h1>
           <div className="Hero__link">
             <Link to="/home/blog">Blog</Link>
-            <Link to="/booking-room">Đặt phòng</Link>
+            <Link to="/search/view-all/new-rooms">Đặt phòng</Link>
             <Link to="/login">Đăng nhập</Link>
             <Link to="register">Đăng ký</Link>
           </div>

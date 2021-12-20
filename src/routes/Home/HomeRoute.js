@@ -17,8 +17,8 @@ function HomeRoute() {
       <Route exact path="/home/create/room" component={CreateRoom} />
       <Route exact path="/home/blog" component={Blog} />
       <Route exact path="/home/blog/detail" component={BlogDetail} />
-      <Route exact path="/home/login" component={Login} />
-      <Route exact path="/home/register" component={Register} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path= "/register" component={Register} />
     </div>
   );
 }

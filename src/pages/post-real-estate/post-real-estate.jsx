@@ -15,7 +15,7 @@ import * as yup from "yup";
 import "react-toastify/dist/ReactToastify.css";
 import Constant from "../../common/Constant";
 import { UtilitiesInformation } from "../RoomDetail/components";
-import HeaderBrand from "../../components/headers/headerBrand"
+import HeaderLogo from "../../components/headers/headerLogo"
 const schema = yup.object().shape({
     title: yup
         .string()
@@ -264,7 +264,7 @@ const PostRealEstate = () => {
     const util_list = Constant.utilities;
     return (
         <>
-        <header><HeaderBrand></HeaderBrand></header>
+        <header><HeaderLogo></HeaderLogo></header>
             <div
                 className="post-real-estate-container"
                 style={{ fontFamily: "Lato" }}

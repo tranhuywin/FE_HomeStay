@@ -20,7 +20,7 @@ function Login() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "50%",
+      top: "10%",
     },
   };
   return (
@@ -39,7 +39,6 @@ function Login() {
               iconComponent={<Gmail />}
             />
             <FranceInput textInput={"Mật khẩu"} iconComponent={<Password />} />
-
             <FranceButton
               textInput={"Đăng nhập"}
               typeHover={2}
@@ -49,7 +48,7 @@ function Login() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Quên mật khẩu ?{" "}
-                <a href="google.com" className={Styles.ActionEventLink}>
+                <a href="/login" className={Styles.ActionEventLink}>
                   Nhấn vào đây
                 </a>
               </p>
@@ -57,7 +56,7 @@ function Login() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Bạn chưa có tài khoản FranceStay?{" "}
-                <a href="google.com" className={Styles.ActionEventLink}>
+                <a href="register" className={Styles.ActionEventLink}>
                   Đăng ký
                 </a>
               </p>
