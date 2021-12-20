@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Hero.scss";
 import $ from "jquery";
 import { SnakeLoading } from "../../../components/Loading";
+import {Search} from "../../../components"
 export default class Quote extends Component {
   constructor(props) {
     super(props);
@@ -93,31 +94,22 @@ export default class Quote extends Component {
       <div
         className="banner-blockquote"
         style={{
-          backgroundImage: `url(${
-            require("../../../assets/images/banner/banner.jpg").default
-          })`,
+          backgroundImage: `url(https://www.ohanaliving.vn/542ac03681516bcca0dd605bedd41a2b.jpg)`,
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
+          height: "50rem",
         }}
       >
         <div className="container">
-          <blockquote>
-            <q id="quote">
-              {this.state.quotes === []
-                ? null
-                : this.state.quotes[numRanQuote].text}
-            </q>
-            <address id="author">
-              {this.state.quotes === []
-                ? null
-                : this.state.quotes[numRanQuote].author}
-            </address>
-            <button className="js-randomQuotes" id="js-randomQuotes">
-              Randome Quotes
-            </button>
-          </blockquote>
+         <h1 className="Hero__title">FranceStay</h1>
+         <p className="Hero__des" style={{marginBottom: "15px", marginTop: "15px"}}>Ứng dụng tìm kiếm homestay miễn phí cho người đi thuê hàng đầu Việt Nam</p>
+         <div style={{width: "520px"}}>
+         <Search styles={{height: "50px"}}/>
+         </div>
+         <p className="Hero__des" style={{fontSize: "24px", marginTop: "18px"}}>Tải app ngay để có trải nghiệm tuyệt vời !</p>
+         
         </div>
       </div>
     );
