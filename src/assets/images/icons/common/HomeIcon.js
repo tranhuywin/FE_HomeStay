@@ -15,6 +15,7 @@ function HomeIcon(props) {
         enableBackground: "new 0 0 512 512",
         fontSize: "1.2em",
         ...props.styleIcon,
+        fill: "#14C1C7",
       }}
       // xml:space="preserve"
       width="16px"

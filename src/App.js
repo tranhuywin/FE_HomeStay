@@ -20,7 +20,7 @@ function App() {
     "/me",
     "/rooms/result",
     "/search/rooms/result",
-    "/home"
+    "/home",
   ];
   window.location.pathname === "/" && window.location.replace("/home");
   return (
