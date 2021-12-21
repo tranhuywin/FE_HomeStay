@@ -130,7 +130,7 @@ function Register() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Bạn đã có tài khoản FranceStay ?{" "}
-                <a href="google.com" className={Styles.ActionEventLink}>
+                <a href="/login" className={Styles.ActionEventLink}>
                   Nhấn vào đây
                 </a>
               </p>

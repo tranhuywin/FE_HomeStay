@@ -12,6 +12,7 @@ function FranceInput(props) {
     typeInput,
     valueVar,
     onChangefunc,
+    onChange,
   } = props;
   return (
     <div className={Styles.FranceInputBlock}>
@@ -32,6 +33,7 @@ function FranceInput(props) {
             placeholder={textInput}
             value={typeInput === "date" ? textInput : valueVar}
             type={typeInput ? typeInput : "text"}
+            onChange={onChange}
           />
           {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}
           <div className={Styles.IconWrap}>

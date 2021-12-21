@@ -9,13 +9,13 @@ import Des_info from "./des_info";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { css } from "@emotion/react";
 import * as yup from "yup";
 import "react-toastify/dist/ReactToastify.css";
 import Constant from "../../common/Constant";
 import { UtilitiesInformation } from "../RoomDetail/components";
-
+import HeaderLogo from "../../components/headers/headerLogo"
 const schema = yup.object().shape({
     title: yup
         .string()
@@ -264,6 +264,7 @@ const PostRealEstate = () => {
     const util_list = Constant.utilities;
     return (
         <>
+        <header><HeaderLogo></HeaderLogo></header>
             <div
                 className="post-real-estate-container"
                 style={{ fontFamily: "Lato" }}
@@ -302,12 +303,13 @@ const PostRealEstate = () => {
                             setFiles={setFiles}
                             fileLength={files.length}
                         />
-                        <input
+                        <Link
                             type="submit"
                             value="Đăng tin"
                             className="btnPost"
                             style={{ padding: "16px 64px", margin: "16px 0" }}
-                        />
+                            to='/home'
+                        >Đăng Tin </Link>
                     </form>
                 </FormProvider>
             </div>

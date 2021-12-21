@@ -3,12 +3,12 @@ import { ButtonBlog } from '../../components';
 import UpArrow from '../../assets/images/icons/Up Arrow.png';
 import Facebook from '../../assets/images/icons/Facebook.png';
 import Twitter from '../../assets/images/icons/Twitter.png';
-import HeaderBrand from '../../components/headers/headerBrand';
+import { HeaderLogo } from "../../components/";
 export default function BlogDetail() {
     return (
         <div>
             <header>
-            <HeaderBrand></HeaderBrand>
+            <HeaderLogo></HeaderLogo>
         </header>
             <img src="https://blog.ohanaliving.vn/content/images/size/w2000/2020/08/neonbrand-ZqqwJA71Ke4-unsplash.jpg"
                 alt="banner"

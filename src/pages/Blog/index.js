@@ -1,7 +1,7 @@
-import {CardBlog, MainCardBlog} from "../../components";
+import { CardBlog, MainCardBlog } from "../../components";
 import BannerSignUp from '../../components/banner/bannerSignUp';
-import HeaderBrand from "../../components/headers/headerBrand";
-
+import { HeaderLogo } from "../../components/";
+import Styles from "../../components/banner/bannerSignUp.module.scss";
 export default function Blog() {
     const blogs = [
         {
@@ -118,39 +118,41 @@ export default function Blog() {
     ]
     return (
         <>
-        <header>
-            <HeaderBrand></HeaderBrand>
-        </header>
-        <BannerSignUp />
-        <div style={{display: 'flex', flexWrap: "wrap"}}>
-            <MainCardBlog
-                title="Homestay xác thực”: Lựa chọn an toàn cho người thuê homestay"
-                dateAgo= "a year ago"
-                timeReading= "3 mins read"
-                styleCard= {{
-                    width: "688px",
-                    height: "390px",
-                    margin: "2.5rem 2.5rem",
-                    backgroundImage:' url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")',
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat"
-                }}
-            />
-            {
-                blogs.map((blog, index) => {
-                    return (
-                        <CardBlog  key={index}
-                        title={blog.title}
-                        to='/home/blog/detail'
-                        srcImg={blog.img}
-                        dateAgo={blog.dateAgo}
-                        timeReading={blog.timeReading}
-                        styleCard={blog.style}
-                        />
-                    )
-                })
-            }
-        </div>
+            <header>
+                <HeaderLogo></HeaderLogo>
+            </header>
+            <div className={Styles.Banner}>
+                <p className={Styles.BannerSologan}></p>
+            </div>
+            <div style={{ display: 'flex', flexWrap: "wrap" }}>
+                <MainCardBlog
+                    title="Homestay xác thực”: Lựa chọn an toàn cho người thuê homestay"
+                    dateAgo="a year ago"
+                    timeReading="3 mins read"
+                    styleCard={{
+                        width: "688px",
+                        height: "390px",
+                        margin: "2.5rem 2.5rem",
+                        backgroundImage: ' url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")',
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat"
+                    }}
+                />
+                {
+                    blogs.map((blog, index) => {
+                        return (
+                            <CardBlog key={index}
+                                title={blog.title}
+                                to='/home/blog/detail'
+                                srcImg={blog.img}
+                                dateAgo={blog.dateAgo}
+                                timeReading={blog.timeReading}
+                                styleCard={blog.style}
+                            />
+                        )
+                    })
+                }
+            </div>
         </>
     );
 }

@@ -67,6 +67,11 @@ function Login() {
               iconComponent={
                 <PasswordIcon style={{ transform: "scale(1.5)" }} />
               }
+            <FranceInput textInput={"Mật khẩu"} iconComponent={<Password />} />
+            <FranceButton
+              textInput={"Đăng nhập"}
+              typeHover={2}
+              colorText={"#fff"}
             />
             {isValidatePassword && (
               <p className={Styles.ErrorText}>*Chưa nhập mật khẩu</p>
@@ -83,7 +88,7 @@ function Login() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Quên mật khẩu ?{" "}
-                <a href="google.com" className={Styles.ActionEventLink}>
+                <a href="/login" className={Styles.ActionEventLink}>
                   Nhấn vào đây
                 </a>
               </p>
@@ -91,7 +96,7 @@ function Login() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Bạn chưa có tài khoản FranceStay?{" "}
-                <a href="google.com" className={Styles.ActionEventLink}>
+                <a href="register" className={Styles.ActionEventLink}>
                   Đăng ký
                 </a>
               </p>

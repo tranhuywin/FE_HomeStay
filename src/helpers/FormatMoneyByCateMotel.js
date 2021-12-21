@@ -19,10 +19,10 @@ function FormatMoneyByCateMotel(typeCate, money) {
     ...showingMoney,
     type:
       typeCate === "Dormitory"
-        ? "người"
+        ? " đêm"
         : typeCate === "Shared" && typeCate === "NotShared"
-        ? "phòng"
-        : "căn",
+        ? " đêm"
+        : " đêm",
   };
 }
 

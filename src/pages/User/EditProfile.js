@@ -1,7 +1,11 @@
 import { PrimaryButton, FranceInput, Vietnam, PhoneNumberInput, FranceSelect } from '../../components';
 import Styles from './EditPRofile.module.scss';
 import Person from '../../assets/images/icons/PersonBlack.png';
+import { useState } from "react";
+
 export default function EditProfile() {
+    const [isEdit, setisEdit] = useState(true);
+
     return (
         <div>
                 <div className={Styles.ProfileInfoAvatar}>
@@ -9,7 +13,7 @@ export default function EditProfile() {
                     <PrimaryButton text="Đổi ảnh đại diện"></PrimaryButton>
                 </div>
                 <div className={Styles.ProfileInfoElement}>
-                    <FranceInput textInput="Pháp" titleInput="Tên"></FranceInput>
+                    <FranceInput textInput="Pháp" titleInput="Tên" onChange={()=>{setisEdit(false)}}></FranceInput>
                 </div>
 
                 <div className={Styles.ProfileInfoElement}>
@@ -35,7 +39,7 @@ export default function EditProfile() {
                     <FranceSelect text="Nam" title="Giới Tính" options={[{text: "Nam", value: "Nam"}, {text: "Nữ", value: "Nữ"}, {text: "Khác", value: "Khác"}]}></FranceSelect>
                 </div>
                 <div style={{float: 'right', marginTop: "24px"}}>
-                <PrimaryButton text="Lưu thông tin" disableButton={true}></PrimaryButton>
+                <PrimaryButton text="Lưu thông tin" disableButton={isEdit}></PrimaryButton>
                 </div>
                
             </div>
