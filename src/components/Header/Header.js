@@ -32,10 +32,10 @@ function Header(props) {
         </div>
       </div>
         <div className="header">
-        <div className="container">
+        <div className="container" style={{padding: 0, margin: 0}}>
           <div className="logo_search">
             <div className="logo">
-            <Link className={Styles.HeaderBrand} style={{paddingleft: "0 !important"}} to="/home" >
+            <Link className={Styles.HeaderBrand} to="/home" >
                 FranceStay
             </Link>
             </div>

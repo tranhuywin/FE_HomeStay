@@ -19,6 +19,7 @@ export { default as PhoneNumberInput } from "./Atom/PhoneNumber/PhoneNumber";
 export { default as FranceSelect } from "./Atom/franceSelect";
 export { default as HeaderLogo } from "./headers/headerLogo";
 export { default as HeaderUser } from "./headers/headerUser";
+export { default as HeaderProfile } from "./Header/HeaderProfile";
 
 export { default as CheckBoxIcon } from "./Atom/SearchFilter/CheckBoxIcon";
 export { default as ListRoomPagination } from "./Room/Pagination/ListRoomPagination";
