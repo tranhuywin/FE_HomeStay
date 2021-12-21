@@ -36,11 +36,11 @@ function Login() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "10%",
+      top: "5%",
     },
   };
   return (
-    <>
+    <div style={{ background: "#fff" }}>
       <Modal styleClass={styles.modalEdit}>
         <div className={Styles.LoginModal}>
           <div className={Styles.Account}>
@@ -163,7 +163,7 @@ function Login() {
           </ItemIndtroduce>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
