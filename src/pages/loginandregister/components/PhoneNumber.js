@@ -9,6 +9,7 @@ function PhoneNumber(props) {
     miniTitleInput,
     isInValid,
     errorText,
+    onChangefunc,
   } = props;
   return (
     <div className={Styles.FranceInputBlock}>
@@ -40,10 +41,12 @@ function PhoneNumber(props) {
           </div>
           <div className={Styles.InputWrap} style={{ flexBasis: "65%" }}>
             <input
+              onChange={(e) => onChangefunc(e.target.value)}
               className={Styles.Input}
               type="text"
               autoComplete="off"
               placeholder={"Số điện thoại"}
+              value={textInput}
             />
             {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}
           </div>

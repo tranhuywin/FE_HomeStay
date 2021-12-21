@@ -12,7 +12,7 @@ function FilterFeature() {
       <HeadingFilter />
       <ListUtilityData />
       <ListCategoryData />
-      <ListSexData />
+      {/* <ListSexData /> */}
       <MoreButton text={"Reset"} />
     </div>
   );

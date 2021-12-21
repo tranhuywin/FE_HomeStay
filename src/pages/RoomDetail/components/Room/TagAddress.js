@@ -8,7 +8,7 @@ function TagAddress(props) {
   const { city, district, streetName } = full_address;
   return (
     <div className="tag_address">
-      <p className="room_name_title">{name_motel}</p>
+      <p className="room_name_title">Chilling France Sunny</p>
       <div className="tag center_item">
         <span className="city center_item">
           <a href="">{city.text}</a>

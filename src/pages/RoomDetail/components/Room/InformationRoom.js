@@ -37,7 +37,7 @@ function InformationRoom(props) {
   return (
     <div className="information_room_detail border_radius_2rem">
       <HeadingIcon
-        nameTitle={"Thông tin phòng"}
+        nameTitle={"Thông tin Homestay"}
         iconComponent={
           <HomeIcon sizeIcon={{ height: "32px", width: "32px" }} />
         }
@@ -45,7 +45,7 @@ function InformationRoom(props) {
       <div className="list_information">
         {room_price && (
           <TextColDetail
-            title_name={"giá phòng"}
+            title_name={"giá Homestay"}
             title_value={`${FormatMoney(room_price, 0, ".", ",")} đồng`}
             styleComponent={{ margin: "2.4rem 0 0 0", width: "calc(100%/4)" }}
           />
@@ -68,27 +68,6 @@ function InformationRoom(props) {
           <TextColDetail
             title_name={"Sức chứa"}
             title_value={`${number_vacancies_available_in_room} ${textSex_Allowed}`}
-            styleComponent={{ margin: "2.4rem 0 0 0", width: "calc(100%/4)" }}
-          />
-        )}
-        {(!!electric_price || electric_price === 0) && (
-          <TextColDetail
-            title_name={"Điện"}
-            title_value={`${FormatMoney(electric_price, 0, ".", ",")} đồng`}
-            styleComponent={{ margin: "2.4rem 0 0 0", width: "calc(100%/4)" }}
-          />
-        )}
-        {(!!water_price || water_price === 0) && (
-          <TextColDetail
-            title_name={"Nước"}
-            title_value={`${FormatMoney(water_price, 0, ".", ",")} đồng`}
-            styleComponent={{ margin: "2.4rem 0 0 0", width: "calc(100%/4)" }}
-          />
-        )}
-        {(!!wifi_cost || wifi_cost === 0) && (
-          <TextColDetail
-            title_name={"WIFI"}
-            title_value={`${FormatMoney(wifi_cost, 0, ".", ",")} đồng`}
             styleComponent={{ margin: "2.4rem 0 0 0", width: "calc(100%/4)" }}
           />
         )}

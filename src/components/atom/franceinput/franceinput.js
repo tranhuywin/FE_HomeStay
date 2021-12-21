@@ -10,6 +10,8 @@ function FranceInput(props) {
     isInValid,
     errorText,
     typeInput,
+    valueVar,
+    onChangefunc,
   } = props;
   return (
     <div className={Styles.FranceInputBlock}>
@@ -24,10 +26,11 @@ function FranceInput(props) {
         </div>
         <div className={Styles.InputWrap}>
           <input
+            onChange={(e) => onChangefunc(e.target.value)}
             className={Styles.Input}
             autoComplete="off"
             placeholder={textInput}
-            value={typeInput === "date" ? textInput : null}
+            value={typeInput === "date" ? textInput : valueVar}
             type={typeInput ? typeInput : "text"}
           />
           {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}

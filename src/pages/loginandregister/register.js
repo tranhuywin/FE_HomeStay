@@ -12,7 +12,40 @@ import {
 } from "../../components/index";
 import PhoneNumberInput from "./components/PhoneNumber";
 import Styles from "./register.module.scss";
+import PasswordIcon from "@mui/icons-material/LockOpen";
+import EmailIcon from "@mui/icons-material/Email";
+import { useState } from "react";
+
 function Register() {
+  const [Email, setEmail] = useState("Địa chỉ Email");
+  const [Password, setPassword] = useState("Mật khẩu");
+  const [ConfirmPassword, setConfirmPassword] = useState("Mật khẩu");
+  const [UserName, setUserName] = useState("Huỳnh Long");
+  const [Phone, setPhone] = useState("");
+  const [isValidateEmail, setIsValidateEmail] = useState(false);
+  const [isValidatePassword, setIsValidatePassword] = useState(false);
+  const [isValidateConfirmPassword, setIsValidateConfirmPassword] =
+    useState(false);
+  const [isValidateUser, setIsValidateUser] = useState(false);
+  const [IsValidatePhone, setIsValidatePhone] = useState(false);
+
+  const handleSubmit = () => {
+    if (Email === "" || Email.includes("Địa chỉ Email"))
+      setIsValidateEmail(true);
+    else setIsValidateEmail(false);
+    if (Password === "" || Password.includes("Mật khẩu"))
+      setIsValidatePassword(true);
+    else setIsValidatePassword(false);
+    if (ConfirmPassword === "" || ConfirmPassword.includes("Mật khẩu"))
+      setIsValidateConfirmPassword(true);
+    else setIsValidateConfirmPassword(false);
+    if (UserName === "" || UserName.includes("Huỳnh Long"))
+      setIsValidateUser(true);
+    else setIsValidateUser(false);
+    if (Phone === "") setIsValidatePhone(true);
+    else setIsValidatePhone(false);
+  };
+
   const styles = {
     groupItem: {
       marginTop: "65px",
@@ -22,7 +55,7 @@ function Register() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "15%",
+      top: "5%",
     },
   };
   return (
@@ -32,35 +65,68 @@ function Register() {
           <div className={Styles.Account}>
             <h2 className={Styles.HeadingTitle}>Đăng ký thành viên</h2>
             <FranceInput
+              onChangefunc={(value) => setEmail(value)}
               titleInput={"Địa chỉ Email"}
-              textInput={"phaplon@gmail.com"}
-              iconComponent={<Gmail />}
+              textInput={"phappy@gmail.com"}
+              iconComponent={<EmailIcon style={{ transform: "scale(1.5)" }} />}
+              textInput={Email}
             />
+            {isValidateEmail && (
+              <p className={Styles.ErrorText}>*Chưa nhập địa chỉ Email</p>
+            )}
             <PhoneNumberInput
+              onChangefunc={(value) => setPhone(value)}
               titleInput={"Số điện thoại"}
-              textInput={"Mật khẩu"}
+              textInput={Phone}
               iconComponent={<Vietnam />}
             />
+            {IsValidatePhone && (
+              <p className={Styles.ErrorText}>*Chưa nhập số điện thoại</p>
+            )}
             <FranceInput
+              onChangefunc={(value) => setUserName(value)}
               titleInput={"Họ và tên đệm"}
-              textInput={"Huỳnh Loan"}
+              // textInput={"Huỳnh Long"}
+              textInput={UserName}
             />
+            {isValidateUser && (
+              <p className={Styles.ErrorText}>*Chưa nhập Họ và tên</p>
+            )}
             <FranceInput
+              onChangefunc={(value) => setPassword(value)}
+              typeInput="password"
               titleInput={"Mật khẩu"}
               miniTitleInput={" (Tối thiểu 8 ký tự)"}
-              textInput={"**********"}
-              iconComponent={<Password />}
+              // textInput={"**********"}
+              textInput={Password}
+              iconComponent={
+                <PasswordIcon style={{ transform: "scale(1.5)" }} />
+              }
             />
+            {isValidatePassword && (
+              <p className={Styles.ErrorText}>*Chưa nhập mật khẩu</p>
+            )}
             <FranceInput
+              onChangefunc={(value) => setConfirmPassword(value)}
+              typeInput="password"
               titleInput={"Xác định mật khẩu"}
-              textInput={"**********"}
-              iconComponent={<Password />}
+              // textInput={"**********"}
+              textInput={ConfirmPassword}
+              iconComponent={
+                <PasswordIcon style={{ transform: "scale(1.5)" }} />
+              }
             />
-            <FranceButton
-              colorText={"#fff"}
-              textInput={"Đăng ký"}
-              typeHover={2}
-            />
+            {isValidateConfirmPassword && (
+              <p className={Styles.ErrorText}>*Chưa nhập mật khẩu xác nhận</p>
+            )}
+            <div onClick={() => handleSubmit()}>
+              <FranceButton
+                colorText={"#fff"}
+                textInput={"Đăng ký"}
+                typeHover={2}
+              />
+            </div>
+
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Bạn đã có tài khoản FranceStay ?{" "}

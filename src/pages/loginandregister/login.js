@@ -9,8 +9,24 @@ import {
   Facebook,
   Google,
 } from "../../components/index";
+import PasswordIcon from "@mui/icons-material/LockOpen";
+import { useState } from "react";
 import Styles from "./login.module.scss";
 function Login() {
+  const [Email, setEmail] = useState("Địa chỉ Email");
+  const [Password, setPassword] = useState("Mật khẩu");
+  const [isValidateEmail, setIsValidateEmail] = useState(false);
+  const [isValidatePassword, setIsValidatePassword] = useState(false);
+
+  const handleSubmit = () => {
+    if (Email === "" || Email.includes("Địa chỉ Email"))
+      setIsValidateEmail(true);
+    else setIsValidateEmail(false);
+    if (Password === "" || Password.includes("Mật khẩu"))
+      setIsValidatePassword(true);
+    else setIsValidatePassword(false);
+  };
+
   const styles = {
     groupItem: {
       marginTop: "65px",
@@ -20,7 +36,7 @@ function Login() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "50%",
+      top: "10%",
     },
   };
   return (
@@ -35,16 +51,34 @@ function Login() {
               </h4>
             </div>
             <FranceInput
-              textInput={"Địa chỉ Email"}
+              onChangefunc={(value) => setEmail(value)}
+              errorText={"*Chưa nhập địa chỉ Email"}
+              textInput={Email}
               iconComponent={<Gmail />}
             />
-            <FranceInput textInput={"Mật khẩu"} iconComponent={<Password />} />
-
-            <FranceButton
-              textInput={"Đăng nhập"}
-              typeHover={2}
-              colorText={"#fff"}
+            {isValidateEmail && (
+              <p className={Styles.ErrorText}>*Chưa nhập địa chỉ Email</p>
+            )}
+            <FranceInput
+              onChangefunc={(value) => setPassword(value)}
+              errorText={"*Chưa nhập mật khẩu"}
+              typeInput="password"
+              textInput={Password}
+              iconComponent={
+                <PasswordIcon style={{ transform: "scale(1.5)" }} />
+              }
             />
+            {isValidatePassword && (
+              <p className={Styles.ErrorText}>*Chưa nhập mật khẩu</p>
+            )}
+
+            <div onClick={() => handleSubmit()}>
+              <FranceButton
+                textInput={"Đăng nhập"}
+                typeHover={2}
+                colorText={"#fff"}
+              />
+            </div>
 
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>

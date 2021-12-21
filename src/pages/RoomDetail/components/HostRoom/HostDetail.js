@@ -4,6 +4,7 @@ import "./HostDetail.scss";
 import { UserIcon } from "../../../../assets/images/icons";
 import { FormatDateTime } from "../../../../helpers";
 import FranceButton from "../../../../components/Atom/francebutton/FranceButton";
+import { Link } from "react-router-dom";
 function HostDetail(props) {
   const {
     host_data: {
@@ -41,13 +42,15 @@ function HostDetail(props) {
       </div>
       <div
         className="button_wrap"
-        style={{ marginTop: "4.8rem", width: "40%", margin: "0.8rem  auto" }}
+        style={{ marginTop: "4.8rem", width: "40%", margin: "1.6rem  auto" }}
       >
-        <FranceButton
-          textInput={"Đặt phòng ngay"}
-          typeHover={2}
-          colorText={"#fff"}
-        />
+        <Link to="/booking-room">
+          <FranceButton
+            textInput={"Đặt phòng ngay"}
+            typeHover={2}
+            colorText={"#fff"}
+          />
+        </Link>
       </div>
     </div>
   );
