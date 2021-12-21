@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
   }
+  box-shadow: 0px 0px 10px 0px #00000040;
 }
 .title {
   @extend .title_common;

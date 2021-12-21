@@ -122,7 +122,9 @@ export default function Blog() {
                 <HeaderLogo></HeaderLogo>
             </header>
             <div className={Styles.Banner}>
-                <p className={Styles.BannerSologan}></p>
+                <p className={Styles.BannerSologan}>FranceStay - Cho thuê homestay, tìm homestay</p>
+                <span style={{fontWeight: '500'}}>FranceStay là ứng dụng - hệ thống thông tin homeStay cho người Việt Nam</span><br />
+            <span style={{fontWeight: '500'}}>Nhằm giúp các bạn tìm phòng homestay phù hợp về giá cả, kết nối những bạn có nhu cầu tìm homestay và cho thuê homestay</span>
             </div>
             <div style={{ display: 'flex', flexWrap: "wrap" }}>
                 <MainCardBlog

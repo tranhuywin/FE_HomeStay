@@ -44,13 +44,6 @@ function HostDetail(props) {
         className="button_wrap"
         style={{ marginTop: "4.8rem", width: "40%", margin: "1.6rem  auto" }}
       >
-        <Link to="/booking-room">
-          <FranceButton
-            textInput={"Đặt phòng ngay"}
-            typeHover={2}
-            colorText={"#fff"}
-          />
-        </Link>
       </div>
     </div>
   );
