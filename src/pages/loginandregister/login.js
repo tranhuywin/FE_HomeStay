@@ -91,7 +91,7 @@ function Login() {
             <div className={Styles.EventTextBlock}>
               <p className={Styles.EventText}>
                 Quên mật khẩu ?{" "}
-                <a href="/login" className={Styles.ActionEventLink}>
+                <a href="/forgot" className={Styles.ActionEventLink}>
                   Nhấn vào đây
                 </a>
               </p>
