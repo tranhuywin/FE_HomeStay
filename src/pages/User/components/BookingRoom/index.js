@@ -10,7 +10,6 @@ export default function BookingRoomUser() {
   return (
     <div>
       <div className={Styles.ProfileInfoAvatar}>
-        <p className={Styles.TitleResult}>Kết quả</p>
       </div>
       <div className={Styles.ProfileInfoElement}>
         <ListRoom />

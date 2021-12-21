@@ -15,6 +15,7 @@ import Styles from "./register.module.scss";
 import PasswordIcon from "@mui/icons-material/LockOpen";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState } from "react";
+import { HeaderLogo } from "../../components/";
 
 function Register() {
   const [Email, setEmail] = useState("Địa chỉ Email");
@@ -55,11 +56,12 @@ function Register() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "5%",
+      top: "20%",
     },
   };
   return (
     <>
+    <header><HeaderLogo></HeaderLogo></header>
       <Modal styleClass={styles.modalEdit}>
         <div className={Styles.LoginModal}>
           <div className={Styles.Account}>
@@ -190,6 +192,7 @@ function Register() {
             marginLeft: "60px",
             display: "inline-block",
             marginTop: "64px",
+            paddingBottom: "450px",
           }}
         >
           <ItemIndtroduce image="/top-sales@2x.png" title="Tiện ích thông minh">

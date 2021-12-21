@@ -11,6 +11,7 @@ import {
 } from "../../components/index";
 import PasswordIcon from "@mui/icons-material/LockOpen";
 import { useState } from "react";
+import { HeaderLogo } from "../../components/";
 import Styles from "./login.module.scss";
 function Login() {
   const [Email, setEmail] = useState("Địa chỉ Email");
@@ -36,10 +37,16 @@ function Login() {
     modalEdit: {
       left: "70%",
       width: "40%",
-      top: "5%",
+      top: "20%",
     },
   };
   return (
+    <>
+    <header>
+    <HeaderLogo />
+    </header>
+
+   
     <div style={{ background: "#fff" }}>
       <Modal styleClass={styles.modalEdit}>
         <div className={Styles.LoginModal}>
@@ -151,6 +158,7 @@ function Login() {
             marginLeft: "60px",
             display: "inline-block",
             marginTop: "64px",
+            paddingBottom: "154px",
           }}
         >
           <ItemIndtroduce image="/top-sales@2x.png" title="Tiện ích thông minh">
@@ -163,7 +171,9 @@ function Login() {
           </ItemIndtroduce>
         </div>
       </div>
+      <br/>
     </div>
+    </>
   );
 }
 
