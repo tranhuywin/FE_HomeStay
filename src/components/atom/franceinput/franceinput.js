@@ -33,7 +33,7 @@ function FranceInput(props) {
             placeholder={textInput}
             value={typeInput === "date" ? textInput : valueVar}
             type={typeInput ? typeInput : "text"}
-            onChange={onChange}
+            // onChange={onChange}
           />
           {!!isInValid && <p className={Styles.ErrorText}>{errorText}</p>}
           <div className={Styles.IconWrap}>

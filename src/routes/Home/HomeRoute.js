@@ -8,7 +8,7 @@ import {
   Blog,
   BlogDetail,
 } from "../../pages";
-
+import Forgotpassword from "../../pages/loginandregister/forgotpassword";
 function HomeRoute() {
   return (
     <div>
@@ -18,7 +18,8 @@ function HomeRoute() {
       <Route exact path="/home/blog" component={Blog} />
       <Route exact path="/home/blog/detail" component={BlogDetail} />
       <Route exact path="/login" component={Login} />
-      <Route exact path= "/register" component={Register} />
+      <Route exact path="/register" component={Register} />
+      <Route exact path="/forgot" component={Forgotpassword} />
     </div>
   );
 }
