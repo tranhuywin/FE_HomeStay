@@ -67,12 +67,8 @@ function Login() {
               iconComponent={
                 <PasswordIcon style={{ transform: "scale(1.5)" }} />
               }
-            <FranceInput textInput={"Mật khẩu"} iconComponent={<Password />} />
-            <FranceButton
-              textInput={"Đăng nhập"}
-              typeHover={2}
-              colorText={"#fff"}
             />
+
             {isValidatePassword && (
               <p className={Styles.ErrorText}>*Chưa nhập mật khẩu</p>
             )}
