@@ -16,12 +16,16 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FranceButton from "../../components/Atom/francebutton/FranceButton";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import PersonIcon from "@mui/icons-material/Person";
+import { Header } from '../../components';
 
 function BookingRoom() {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   return (
-    <div className="container">
+    <>
+    <header><Header></Header></header>
+    
+    <div className="container" style={{paddingTop: "32px"}}>
       <div className="content">
         <div className="disflex">
           <div className="left_content">
@@ -521,6 +525,7 @@ function BookingRoom() {
         variant="filled"
       /> */}
     </div>
+    </>
   );
 }
 
